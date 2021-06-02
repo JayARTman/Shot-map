@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* navbar font style */
+.navbar {
+    font-family: "Merienda", sans-serif;
+}
+
+/* body font style */
+body {
+    font-family: "Baloo Tammudu 2", sans-serif;
+}
