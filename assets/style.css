@@ -12,4 +12,22 @@
 /* body font style */
 body {
     font-family: "Baloo Tammudu 2", sans-serif;
+    background-color: rgb(158, 158, 175);
+}
+
+/* .navbar-nav {
+
+} */
+
+.intro-p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-style: italic
+}
+
+.intro-p2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
 }
