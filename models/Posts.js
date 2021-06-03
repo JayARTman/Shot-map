@@ -12,6 +12,14 @@ const Post = sequelize.define('Post', {
         type: DataTypes.STRING(175),
         allowNull: false
     },
+    city: {
+        type: DataTypes.STRING(),
+        allowNull: false,
+    },
+    state: {
+        type: DataTypes.STRING(17),
+        allowNull: false
+    },
     description: {
         type: DataTypes.STRING(300),
         allowNull: false,
@@ -20,9 +28,16 @@ const Post = sequelize.define('Post', {
         type: DataTypes.STRING,
         references: {
             model: 'User',
+            key: 'user_name'
+        }
+    },
+    photo: {
+        references: {
+            model: 'Photo',
             key: 'id'
         }
     }
+    
 },
 {
     timeStamps: true,
