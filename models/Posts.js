@@ -15,10 +15,11 @@ const Post = sequelize.define('Post', {
     city: {
         type: DataTypes.STRING(),
         allowNull: false,
-    },
-    state: {
-        type: DataTypes.STRING(17),
-        allowNull: false
+        references: {
+            model: 'City',
+            key: 'city_name'
+        },
+        
     },
     description: {
         type: DataTypes.STRING(300),
