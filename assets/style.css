@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* index.html style start */
 /* navbar font style */
 .navbar {
     font-family: "Merienda", sans-serif;
@@ -14,10 +15,6 @@ body {
     font-family: "Baloo Tammudu 2", sans-serif;
     background-color: rgb(158, 158, 175);
 }
-
-/* .navbar-nav {
-
-} */
 
 .intro-p {
     display: flex;
@@ -32,7 +29,14 @@ body {
     font-size: 1.4rem;
 }
 
-/* .card {
+/* index.html style end */
+
+/* about.html style start */
+
+.aboutp1 {
     display: flex;
     justify-content: center;
-} */
+    font-size: 2.7rem;
+}
+
+/* about.html style end */
