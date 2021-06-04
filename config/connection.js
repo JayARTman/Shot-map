@@ -5,7 +5,7 @@ const Sequelize = require('sequelize');
 //     host: 'localhost',
 //     dialect: 'mysql'
 // });
-const sequelize = new Sequelize('shot_map', process.env.DB_USER, process.env.DB_PW, {
+const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
       host: 'localhost',
       dialect: 'mysql',
       dialectOptions: {
