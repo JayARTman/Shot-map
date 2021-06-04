@@ -16,12 +16,12 @@ Posts.init(
             type: DataTypes.STRING(175),
             allowNull: false
         },
-        city: {
+        citybity: {
             type: DataTypes.STRING(),
             allowNull: false,
             references: {
-                model: 'City',
-                key: 'city_name'
+                model: 'cities',
+                key: 'id'
             },
             
         },
@@ -35,13 +35,16 @@ Posts.init(
                 model: 'User',
                 key: 'user_name'
             }
-        },
-        photo: {
-            references: {
-                model: 'Photo',
-                key: 'id'
-            }
         }
+        // photo: {
+        //     references: {
+        //         type: DataTypes.STRING,
+        //         references: {
+        //             model: 'Photo',
+        //             key: 'id'
+        //         }
+        //     }
+        
     
     },
     {
