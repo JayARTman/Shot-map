@@ -16,6 +16,7 @@ Posts.init(
             type: DataTypes.STRING(175),
             allowNull: false
         },
+
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -23,7 +24,6 @@ Posts.init(
                 model: 'cities',
                 key: 'id'
             },
-            
         },
         description: {
             type: DataTypes.STRING(300),
