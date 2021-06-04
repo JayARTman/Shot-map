@@ -1,14 +1,20 @@
 require('dotenv').config();
+const Sequelize = require('sequelize');
 
-const mysql = require('mysql');
-
-const con = mysql.createConnection({
+const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
     host: 'localhost',
-    user: process.env.DB_USER,
-    password: process.env.DB_PW
+    dialect: 'mysql'
 });
 
-con.connect(err => {
-    if(err) throw err;
-    console.log('connected!');
-});
+module.exports = sequelize;
+// const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+//     host: 'localhost',
+//     dialect: 'mysql',
+//     dialectOptions: {
+//       decimalNumbers: true,
+//     },
+//   });
+
+// module.exports = sequelize
+
+
