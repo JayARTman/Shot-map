@@ -1,7 +1,6 @@
-
-const Users = require('./Users');
-const Posts = require('./Posts');
-const Cities = require('./Cities');
+const Users = require('./Users.js');
+const Posts = require('./Posts.js');
+const Cities = require('./Cities.js');
 
 Posts.belongsTo(Users, {
     foreignKey: 'user_name'
