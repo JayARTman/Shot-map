@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
+const sequelize = new Sequelize('shot_map', 'root', 'Valandme123!', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -15,6 +15,6 @@ module.exports = sequelize;
 //     },
 //   });
 
-// module.exports = sequelize
+ module.exports = sequelize
 
 
