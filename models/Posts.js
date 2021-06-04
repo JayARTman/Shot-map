@@ -16,15 +16,15 @@ Posts.init(
             type: DataTypes.STRING(175),
             allowNull: false
         },
-        citybity: {
-            type: DataTypes.STRING(),
-            allowNull: false,
-            references: {
-                model: 'cities',
-                key: 'id'
-            },
+        // citybity: {
+        //     type: DataTypes.STRING(),
+        //     allowNull: false,
+        //     references: {
+        //         model: 'cities',
+        //         key: 'id'
+        //     },
             
-        },
+        // },
         description: {
             type: DataTypes.STRING(300),
             allowNull: false,
