@@ -16,15 +16,15 @@ Posts.init(
             type: DataTypes.STRING(175),
             allowNull: false
         },
-        // citybity: {
-        //     type: DataTypes.STRING(),
-        //     allowNull: false,
-        //     references: {
-        //         model: 'cities',
-        //         key: 'id'
-        //     },
-            
-        // },
+
+        location: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'cities',
+                key: 'id'
+            },
+        },
         description: {
             type: DataTypes.STRING(300),
             allowNull: false,
@@ -32,7 +32,7 @@ Posts.init(
         user_name: {
             type: DataTypes.STRING,
             references: {
-                model: 'User',
+                model: 'users',
                 key: 'user_name'
             }
         }
