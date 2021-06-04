@@ -10,7 +10,17 @@ Users.hasMany(Posts, {
     foreignKey: 'user_name'
 });
 
-//Cities.belongsTo(Posts, {
+// Posts.hasOne(Cities);
+Posts.belongsTo(Cities, {
+    foreignKey: 'location'
+});
+
+Cities.hasMany(Posts, {
+    foreignKey: 'location'
+})
+
+
+
 //     foreignKey: 'city_name'
 // });
 
