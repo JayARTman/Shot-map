@@ -1,9 +1,27 @@
-const sequelize = require('sequelize');
 
-const User = require('./Users');
-const Post = require('./Posts');
+const Users = require('./Users');
+const Posts = require('./Posts');
+const Cities = require('./Cities');
 
-Post.belongsTo(User, {
+Posts.belongsTo(Users, {
     foreignKey: 'user_name'
 });
+
+Users.hasMany(Posts, {
+    foreignKey: 'user_name'
+});
+
+Cities.belongsTo(Posts, {
+    foreignKey: 'city_name'
+});
+
+Posts.hasOne(Cities);
+
+module.exports = {
+    Posts,
+    Users,
+    Cities
+};
+
+
 
