@@ -10,11 +10,11 @@ Users.hasMany(Posts, {
     foreignKey: 'user_name'
 });
 
-Cities.belongsTo(Posts, {
-    foreignKey: 'city'
-});
+//Cities.belongsTo(Posts, {
+//     foreignKey: 'city_name'
+// });
 
-Posts.hasOne(Cities);
+//Posts.hasOne(Cities);
 
 module.exports = {
     Posts,
