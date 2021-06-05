@@ -16,7 +16,6 @@ Posts.init(
             type: DataTypes.STRING(175),
             allowNull: false
         },
-
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -24,9 +23,8 @@ Posts.init(
                 model: 'cities',
                 key: 'id'
             },
-        },
-        description: {
-            type: DataTypes.STRING(300),
+        info: {
+          type: DataTypes.STRING(300),
             allowNull: false,
         },
         user_name: {
@@ -44,13 +42,11 @@ Posts.init(
         //             key: 'id'
         //         }
         //     }
-        
-    
     },
     {
         sequelize,
         timeStamps: true,
-        freezeTable: true,
+        freezeTableName: true,
         modelName: 'posts'
 });
 
