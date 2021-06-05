@@ -1,21 +1,23 @@
 
+const Cities = require('./Cities');
 const Users = require('./Users');
 const Posts = require('./Posts');
-const Cities = require('./Cities');
 
 Posts.belongsTo(Users, {
-    foreignKey: 'user_name'
+    foreignKey: 'user_name',
+    constraints: false,
+     allowNull:true,
+      defaultValue:null
 });
 
 Users.hasMany(Posts, {
-    foreignKey: 'user_name'
+    constraints: false
 });
 
-//Cities.belongsTo(Posts, {
-//     foreignKey: 'city_name'
-// });
-
-//Posts.hasOne(Cities);
+Posts.hasOne(Cities, {
+    foreignKey: 'location',
+    constraints: false
+});
 
 module.exports = {
     Posts,
