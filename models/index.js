@@ -19,11 +19,6 @@ Posts.hasOne(Cities, {
     constraints: false
 });
 
-// Cities.belongsTo(Posts, {
-//     foreignKey: 'id',
-//     constraints: false   
-// });
-
 module.exports = {
     Posts,
     Users,
