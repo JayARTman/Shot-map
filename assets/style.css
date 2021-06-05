@@ -10,6 +10,15 @@
     font-family: "Merienda", sans-serif;
 }
 
+/* gets rid of the empty space on right side of website */
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 /* body font style */
 body {
     font-family: "Baloo Tammudu 2", sans-serif;
