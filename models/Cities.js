@@ -23,7 +23,7 @@ Cities.init(
     {
         sequelize,
         timeStamps: true,
-        freezeTable: true,
+        freezeTableName: true,
         modelName: 'cities'
 });
 
