@@ -23,6 +23,7 @@ html,body {
 body {
     font-family: "Baloo Tammudu 2", sans-serif;
     background-color: rgb(158, 158, 175);
+    font-size: .7rem;
 }
 
 .intro-p {
@@ -38,9 +39,21 @@ body {
     font-size: 1.4rem;
 }
 
+.card {
+    padding: 0rem;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 1rem;
+}
+
+/* .menu {
+    text-align: center;
+} */
+
 /* index.html style end */
 
 /* about.html style start */
+
 
 .aboutp1 {
     display: flex;

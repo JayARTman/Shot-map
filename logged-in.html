@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- this is where the logo will go -->
     <title>Shot-map</title>
 </head>
@@ -34,29 +37,98 @@
     <section class="main-container text-center">
         <div class="row">
           <div class="col-sm">
-            Main div
             <!-- hero div -->
-            <article class="hero-container">
+            <article class="hero-container bg-primary">
                 <div class="row">
+                    <!-- filler is used for the empty spacing on the left and right sides of the center grid, which is where our stuff will be -->
+                    <!-- KEEP THESE! -->
                   <div class="col-sm">
-                    Hero div
+                      Filler
+                  </div>
+                  <div class="col-sm-10">
+                    <h2>Hi, John Doe!</h2>  
+                  </div>
+                  <div class="col-sm">
+                      Filler
                   </div>
                 </div>
             </article>
             <!-- sign-up div -->
-            <article class="sign-up-container">
+            <article class="sign-up-container flex-d bg-danger">
                 <div class="row">
                   <div class="col-sm">
-                    sign-up div
+                    Filler
+                  </div>
+                  <div class="col-sm-10 align-self-center">
+                    <h3>Upload a new photo</h3>
+                    <!-- dropdown button works, but we should make the list smaller with a scroll bar, and add logic to select the city -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select a City:
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button">Appleton</button>
+                          <button class="dropdown-item" type="button">Beloit</button>
+                          <button class="dropdown-item" type="button">Brookfield</button>
+                          <button class="dropdown-item" type="button">Eau Claire</button>
+                          <button class="dropdown-item" type="button">Fond du Lac</button>
+                          <button class="dropdown-item" type="button">Green Bay</button>
+                          <button class="dropdown-item" type="button">Greenfield</button>
+                          <button class="dropdown-item" type="button">Janesville</button>
+                          <button class="dropdown-item" type="button">Kenosha</button>
+                          <button class="dropdown-item" type="button">La Crosse</button>
+                          <button class="dropdown-item" type="button">Madison</button>
+                          <button class="dropdown-item" type="button">Milwaukee</button>
+                          <button class="dropdown-item" type="button">New Berlin</button>
+                          <button class="dropdown-item" type="button">Oshkosh</button>
+                          <button class="dropdown-item" type="button">Racine</button>
+                          <button class="dropdown-item" type="button">Sheboygan</button>
+                          <button class="dropdown-item" type="button">Waukesha</button>
+                          <button class="dropdown-item" type="button">Wausau</button>
+                          <button class="dropdown-item" type="button">Wauwatosa</button>
+                          <button class="dropdown-item" type="button">West Allis</button>
+                        </div>
+                    </div>
+                    <br/>
+                    <h4>Select a Picture:</h4>
+                    <!-- 'w-25' is how to set bootstrap's width -->
+                    <!-- browse a file to upload input -->
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                                <div class="input-group mb-3 w-125">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-secondary" type="button">Browse</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Browse local files..." aria-label="" aria-describedby="basic-addon1">
+                                </div>
+                          </div>    
+                      </div>  
+                  <!-- description of area input -->
+                      <div class="row justify-content-center">
+                        <div class="col-4">
+                            <div class="input-group mb-3 w-125">
+                                <div class="input-group-prepend">
+                                    <button class="btn btn-secondary" type="button">Browse</button>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Browse local files..." aria-label="" aria-describedby="basic-addon1">
+                            </div>
+                        </div>    
+                      </div> 
+                  <!-- col-sm-10 div end -->
+                  </div>
+                  <div class="col-sm">
+                    Filler
                   </div>
                 </div>
             </article>
             <!-- upload div, the cards have a button on them for now, we can always remove it and make the whole card a link to view its details -->
             <!-- cards need to be properly spaced for mobile yet -->
-            <section class="upload-picture-container d-flex p-2 justify-content-center align-items-center flex-wrap">
+            <section class="upload-picture-container bg-tertiary">
+                <h4>My Latest Uploads:</h4>
                     <div class="row">
-                        <div class="col flex-d justify-content-center align-items-center flex-wrap">
-                            <div class="card" style="width: 20.2rem;">
+                        <div class="col">
+                            <div class="card" style="width: 11rem;">
+                                <!-- add the image -->
                                 <img class="card-img-top" src="..." alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title">Card title</h5>
@@ -68,7 +140,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card" style="width: 20.2rem;">
+                            <div class="card" style="width: 11rem;">
                                 <img class="card-img-top" src="..." alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title">Card title</h5>
@@ -82,7 +154,7 @@
                         <!-- keep this in here for proper spacing -->
                         <div class="w-100"></div>
                         <div class="col">
-                            <div class="card" style="width: 20.2rem;">
+                            <div class="card" style="width: 11rem;">
                                 <img class="card-img-top" src="..." alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title">Card title</h5>
@@ -94,7 +166,7 @@
                             </div>
                         </div>
                         <div class="col">
-                            <div class="card" style="width: 20.2rem;">
+                            <div class="card" style="width: 11rem;">
                                 <img class="card-img-top" src="..." alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title">Card title</h5>
@@ -109,11 +181,11 @@
             </section>
             <!-- footer div -->
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <div class="container-fluid d-flex justify-content-center">
+                <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
                     <div class="navbar-nav">
-                        <a class="nav-link2 " aria-current="page" href="#">About</a>
-                        <a class="nav-link2" href="#">Contact</a>
-                        <a class="nav-link2" href="#">Favorites</a>
+                        <a class="nav-link " aria-current="page" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Favorites</a>
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                     </div>
                 </div>
@@ -123,42 +195,3 @@
     </section>
 </body>
 </html>
-
-
-
-
-
-
-
-
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select a City!
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-    </div>
-</div>
