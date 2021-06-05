@@ -16,23 +16,23 @@ Posts.init(
             type: DataTypes.STRING(175),
             allowNull: false
         },
-        // citybity: {
-        //     type: DataTypes.STRING(),
-        //     allowNull: false,
-        //     references: {
-        //         model: 'cities',
-        //         key: 'id'
-        //     },
+        location: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'cities',
+                key: 'id'
+            },
             
-        // },
-        description: {
+        },
+        info: {
             type: DataTypes.STRING(300),
             allowNull: false,
         },
         user_name: {
             type: DataTypes.STRING,
             references: {
-                model: 'User',
+                model: 'users',
                 key: 'user_name'
             }
         }
@@ -44,13 +44,11 @@ Posts.init(
         //             key: 'id'
         //         }
         //     }
-        
-    
     },
     {
         sequelize,
         timeStamps: true,
-        freezeTable: true,
+        freezeTableName: true,
         modelName: 'posts'
 });
 

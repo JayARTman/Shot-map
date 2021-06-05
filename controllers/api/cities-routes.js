@@ -6,7 +6,7 @@ const { Posts, Users, Cities} = require('../../models')
 
 router.post('./city', (req, res) => {
     Cities.findAll({
-        attributes: 
+        
     })
 })
 module.exports = router;
