@@ -34,86 +34,104 @@
     <section class="main-container text-center">
         <div class="row">
           <div class="col-sm">
-            Main div
             <!-- hero div -->
-            <article class="hero-container">
+            <article class="hero-container bg-primary">
                 <div class="row">
+                    <!-- filler is used for the empty spacing on the left and right sides of the center grid, which is where our stuff will be -->
+                    <!-- KEEP THESE! -->
                   <div class="col-sm">
-                    Hero div
+                      Filler
+                  </div>
+                  <div class="col-sm-10">
+                    <h2>Search for photos in Wisconsin cities!</h2>  
+                    <div class="row justify-content-center">
+                        <div class="col-9">
+                            <div class="input-group-description mb-3 w-125">
+                                <!-- did we want to use a dropdown for this as well? -->
+                                <input type="text" class="form-control" placeholder="Select a City" aria-label="" aria-describedby="basic-addon1">
+                            </div>
+                        </div>    
+                      </div> 
+                  </div>
+                  <div class="col-sm">
+                      Filler
                   </div>
                 </div>
             </article>
             <!-- sign-up div -->
-            <article class="sign-up-container">
+            <article class="sign-up-container flex-d bg-danger">
                 <div class="row">
                   <div class="col-sm">
-                    sign-up div
+                    Filler
+                  </div>
+                  <div class="col-sm-10 align-self-center">
+                    <h3>Log in to upload and share your city pictures with the SHOT MAP community.</h3> 
+                    <button type="button" class="btn btn-secondary">Log in</button>
+                    <br/>
+                    <br/>
+                    <h3>Not a member of the SHOT-MAP community yet!? SIGN UP now!</h3>
+                    <button type="button" class="btn btn-secondary">Sign up</button>
+                    <br/>
+                    <br/>
+                  </div>
+                  <div class="col-sm">
+                    Filler
                   </div>
                 </div>
             </article>
-            <!-- upload div, the cards have a button on them for now, we can always remove it and make the whole card a link to view its details -->
-            <!-- cards need to be properly spaced for mobile yet -->
-            <section class="upload-images-container d-flex p-2 justify-content-center align-items-center flex-wrap">
-                    <div class="row">
-                        <div class="col flex-d justify-content-center align-items-center flex-wrap">
-                            <div class="card" style="width: 20.2rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+            <!-- Uploaded images div -->
+            <article class="upload-images-container">
+              <div class="row">
+                  <h4>Latest Uploads:</h4>
+                <div class="col-sm">
+                    Filler
+                </div>
+                <div class="col-sm-10"> 
+                    <section class="row justify-content-center">
+                        <div class="col-sm-10">
+                            <div class="container">
+                                <div class="row">
+                                  <div class="col">
+                                    <div class="img">
+                                        <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                      <div class="img">
+                                          <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
+                                      </div>
+                                  </div>
+                                  <div class="w-100">
+                                      <br/>
+                                      <br/>
+                                  </div>
+                                  <div class="col">
+                                    <div class="img">
+                                        <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <div class="img">
+                                        <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
+                                    </div>
+                                  </div>
                                 </div>
-                            </div>
+                              </div> 
                         </div>
-                        <div class="col">
-                            <div class="card" style="width: 20.2rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- keep this in here for proper spacing -->
-                        <div class="w-100"></div>
-                        <div class="col">
-                            <div class="card" style="width: 20.2rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 20.2rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
+                    </section>
+                </div>
+                <div class="col-sm">
+                    Filler
+                </div>
+              </div>
+            </article>
             <!-- footer div -->
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <div class="container-fluid d-flex justify-content-center">
+                <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
                     <div class="navbar-nav">
-                        <a class="nav-link2 " aria-current="page" href="#">About</a>
-                        <a class="nav-link2" href="#">Contact</a>
-                        <a class="nav-link2" href="#">Favorites</a>
+                        <a class="nav-link " aria-current="page" href="#">About</a>
+                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Favorites</a>
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
                     </div>
                 </div>
@@ -123,114 +141,3 @@
     </section>
 </body>
 </html>
-
-
-
-
-
-
-
-
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select a City!
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-      <a class="dropdown-item" href="#"></a>
-    </div>
-</div>
-
-
-
-
-
-
-
- <!-- upload div, the cards have a button on them for now, we can always remove it and make the whole card a link to view its details -->
-            <!-- cards need to be properly spaced for mobile yet -->
-            <section class="upload-picture-container bg-tertiary">
-                <h4>My Latest Uploads:</h4>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card" style="width: 11rem;">
-                                <!-- add the image -->
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 11rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- keep this in here for proper spacing -->
-                        <div class="w-100"></div>
-                        <div class="col">
-                            <div class="card" style="width: 11rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 11rem;">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                                  </p>
-                                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-
-
-
-            <div class="img"><img src="./assets/images/150.png" alt="..." class="img-thumbnail"></div>
-                            <div class="img"><img src="./assets/images/150.png" alt="..." class="img-thumbnail"></div>
-                            Cards were difficult here...Should we try to use responsive images? Maybe that NPM Jeremiah talked about? 
