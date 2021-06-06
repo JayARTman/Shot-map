@@ -45,9 +45,9 @@ body {
     margin-bottom: 1rem;
 }
 
-/* #submitContactButton {
-    width: 100%;
-} */
+#selectCitySignInButton {
+    padding-bottom: 2rem;
+}
 
 /* placeholder font style end */
 
