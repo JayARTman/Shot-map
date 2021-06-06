@@ -63,7 +63,7 @@
                     <h3>Upload a new photo</h3>
                     <!-- dropdown button works, but we should make the list smaller with a scroll bar, and add logic to select the city -->
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button id="selectCitySignInBtn" class="btn btn-secondary dropdown-toggle pb-1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Select a City:
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -96,10 +96,12 @@
                       <div class="row justify-content-center">
                           <div class="col-7">
                                 <div class="input-group mb-3 w-100">
-                                    <div class="input-group-prepend">
-                                        <button class="btn btn-secondary" type="button">Browse</button>
+                                  <form>
+                                    <div class="form-group">
+                                      <label for="exampleFormControlFile1"></label>
+                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Browse local files..." aria-label="" aria-describedby="basic-addon1">
+                                  </form>
                                 </div>
                           </div>    
                       </div>  
@@ -112,7 +114,7 @@
                             </div>
                         </div>    
                       </div> 
-                      <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+                      <button type="button" class="btn btn-secondary btn-lg pb-1">Submit</button>
                   <!-- col-sm-10 div end -->
                   </div>
                   <div class="col-sm">
