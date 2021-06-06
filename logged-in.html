@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- this is where the logo will go -->
     <title>Shot-map</title>
 </head>
@@ -43,15 +46,7 @@
                       Filler
                   </div>
                   <div class="col-sm-10">
-                    <h2>Search for photos in Wisconsin cities!</h2>  
-                    <div class="row justify-content-center">
-                        <div class="col-9">
-                            <div class="input-group-description mb-3 w-125">
-                                <!-- did we want to use a dropdown for this as well? -->
-                                <input type="text" class="form-control" placeholder="Select a City" aria-label="" aria-describedby="basic-addon1">
-                            </div>
-                        </div>    
-                      </div> 
+                    <h2>Hi, John Doe!</h2>  
                   </div>
                   <div class="col-sm">
                       Filler
@@ -65,14 +60,60 @@
                     Filler
                   </div>
                   <div class="col-sm-10 align-self-center">
-                    <h3>Log in to upload and share your city pictures with the SHOT MAP community.</h3> 
-                    <button type="button" class="btn btn-secondary">Log in</button>
+                    <h3>Upload a new photo</h3>
+                    <!-- dropdown button works, but we should make the list smaller with a scroll bar, and add logic to select the city -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select a City:
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button">Appleton</button>
+                          <button class="dropdown-item" type="button">Beloit</button>
+                          <button class="dropdown-item" type="button">Brookfield</button>
+                          <button class="dropdown-item" type="button">Eau Claire</button>
+                          <button class="dropdown-item" type="button">Fond du Lac</button>
+                          <button class="dropdown-item" type="button">Green Bay</button>
+                          <button class="dropdown-item" type="button">Greenfield</button>
+                          <button class="dropdown-item" type="button">Janesville</button>
+                          <button class="dropdown-item" type="button">Kenosha</button>
+                          <button class="dropdown-item" type="button">La Crosse</button>
+                          <button class="dropdown-item" type="button">Madison</button>
+                          <button class="dropdown-item" type="button">Milwaukee</button>
+                          <button class="dropdown-item" type="button">New Berlin</button>
+                          <button class="dropdown-item" type="button">Oshkosh</button>
+                          <button class="dropdown-item" type="button">Racine</button>
+                          <button class="dropdown-item" type="button">Sheboygan</button>
+                          <button class="dropdown-item" type="button">Waukesha</button>
+                          <button class="dropdown-item" type="button">Wausau</button>
+                          <button class="dropdown-item" type="button">Wauwatosa</button>
+                          <button class="dropdown-item" type="button">West Allis</button>
+                        </div>
+                    </div>
                     <br/>
-                    <br/>
-                    <h3>Not a member of the SHOT-MAP community yet!? SIGN UP now!</h3>
-                    <button type="button" class="btn btn-secondary">Sign up</button>
-                    <br/>
-                    <br/>
+                    <h4>Select a Picture:</h4>
+                    <!-- 'w-25' is how to set bootstrap's width -->
+                    <!-- browse a file to upload input -->
+                      <div class="row justify-content-center">
+                          <div class="col-7">
+                                <div class="input-group mb-3 w-100">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-secondary" type="button">Browse</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Browse local files..." aria-label="" aria-describedby="basic-addon1">
+                                </div>
+                          </div>    
+                      </div>  
+                    <!-- description of area input -->
+                    <h4>Describe Your Journey!</h4>
+                      <div class="row justify-content-center">
+                        <div class="col-9">
+                            <div class="input-group-description mb-3 w-125">
+                                <input type="text" class="form-control" placeholder="Where are you? How did you find this cool area?" aria-label="" aria-describedby="basic-addon1">
+                            </div>
+                        </div>    
+                      </div> 
+                      <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+                  <!-- col-sm-10 div end -->
                   </div>
                   <div class="col-sm">
                     Filler
@@ -82,7 +123,6 @@
             <!-- Uploaded images div -->
             <article class="upload-images-container">
               <div class="row">
-                  <h4>Latest Uploads:</h4>
                 <div class="col-sm">
                     Filler
                 </div>
