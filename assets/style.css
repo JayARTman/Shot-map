@@ -23,7 +23,6 @@ html,body {
 body {
     font-family: "Baloo Tammudu 2", sans-serif;
     background-color: rgb(158, 158, 175);
-    font-size: .7rem;
 }
 
 .intro-p {
@@ -46,9 +45,9 @@ body {
     margin-bottom: 1rem;
 }
 
-.sign-up-form {
-    width: 90%;
-}
+/* #submitContactButton {
+    width: 100%;
+} */
 
 /* placeholder font style end */
 
