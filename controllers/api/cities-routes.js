@@ -6,7 +6,8 @@ const { Posts, Users, Cities} = require('../../models')
 
 router.post('/', (req, res) => {
     Cities.create({
-        city_name: req.body.city_name
+        city_name: req.body.city_name,
+        state: req.body.state
      })
      .then(dbCityData => res.json(dbCityData))
     .catch(err => {
@@ -22,5 +23,20 @@ router.get('/', (req,res) => {
         console.log(err);
         res.status(500).json(err);
       });
+});
+
+router.get('/:city_name', (req, res) => {
+  Cities.findAll({ where: { city_name: req.body }})
+  .then(dbCityData => {
+    if(!dbCityData) {
+      res.status(404);
+      return;
+    }
+    res.json(dbCityData);
   })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  })
+})
 module.exports = router;
