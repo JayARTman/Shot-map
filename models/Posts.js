@@ -34,6 +34,7 @@ Posts.init(
                 key: 'id'
             }
         }
+    }
         // photo: {
         //     references: {
         //         type: DataTypes.STRING,
