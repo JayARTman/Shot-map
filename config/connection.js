@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('shot_map', 'root', 'Valandme123!', {
