@@ -29,10 +29,10 @@ Posts.init(
             allowNull: false,
         },
         user_name: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'users',
-                key: 'user_name'
+                key: 'id'
             }
         }
     
@@ -47,7 +47,7 @@ Posts.init(
     },
     {
         sequelize,
-        timeStamps: true,
+        timestamps: false,
         freezeTableName: true,
         modelName: 'posts'
 });
