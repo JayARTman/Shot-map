@@ -2,6 +2,7 @@ const router = require('express').Router();
 //const sequelize = require('../../config/connection');
 const { Posts, Users, Cities} = require('../../models');
 
+//get all users?
 
 router.post('/', (req, res) => {
     Users.create({
@@ -27,6 +28,20 @@ router.get('/', (req,res) => {
     });
 })
 
+router.get('/:user_name', (req, res) => {
+    Users.findOne({ where: { user_name: req.body }})
+    .then(dbUserData => {
+        if(!dbUserData) {
+            res.status(404)
+            return;
+        }
+        res.json(dbUserData);
+    })
+    .catch( err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
 
 module.exports = router;
 
