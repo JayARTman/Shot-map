@@ -6,15 +6,16 @@ const Posts = require('./Posts');
 Posts.belongsTo(Users, {
     foreignKey: 'user_name',
     constraints: false,
-     allowNull:true,
-      defaultValue:null
+  
 });
 
 Users.hasMany(Posts, {
+    foreignKey: 'user_name',
     constraints: false
+    
 });
 
-Posts.hasOne(Cities, {
+Posts.belongsTo(Cities, {
     foreignKey: 'location',
     constraints: false
 });
