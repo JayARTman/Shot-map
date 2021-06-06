@@ -46,6 +46,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.sign-up-form {
+    width: 90%;
+}
+
 /* placeholder font style end */
 
 /* .menu {
