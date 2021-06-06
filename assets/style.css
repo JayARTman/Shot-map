@@ -46,6 +46,8 @@ body {
     margin-bottom: 1rem;
 }
 
+/* placeholder font style end */
+
 /* .menu {
     text-align: center;
 } */
@@ -60,11 +62,5 @@ body {
     justify-content: center;
     font-size: 2.7rem;
 }
-
-/* .aboutp2 { not sure if this is going to work with the future templates
-    display: flex;
-    justify-content: center;
-    margin: 
-} */
 
 /* about.html style end */
