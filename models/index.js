@@ -1,7 +1,7 @@
+
 const Cities = require('./Cities');
 const Users = require('./Users');
 const Posts = require('./Posts');
-
 
 Posts.belongsTo(Users, {
     foreignKey: 'user_name',

@@ -23,10 +23,8 @@ Posts.init(
                 model: 'cities',
                 key: 'id'
             },
-            
-        },
         info: {
-            type: DataTypes.STRING(300),
+          type: DataTypes.STRING(300),
             allowNull: false,
         },
         user_name: {
