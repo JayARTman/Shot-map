@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { Posts, Users, Cities} = require('../../models')
 
 
-
+//route for posting a new post
 router.post('/', (req, res) => {
     Posts.create({ 
         title: req.body.title,
@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
+//route for finding all posts
 router.get('/', (req, res) => {
     Posts.findAll({})
     .then(dbPostData => res.json(dbPostData))
