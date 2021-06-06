@@ -12,9 +12,10 @@ Cities.init(
             allowNull: false
         },
         city_name: {
-            type: DataTypes.STRING(17),
+            type: DataTypes.STRING(50),
             allowNull: false
         },
+        // },
         state: {
             type: DataTypes.STRING(17),
             allowNull: false
@@ -22,7 +23,7 @@ Cities.init(
     },
     {
         sequelize,
-        timeStamps: true,
+        timestamps: false,
         freezeTableName: true,
         modelName: 'cities'
 });
