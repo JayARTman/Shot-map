@@ -13,7 +13,7 @@
 <body>
     <!-- navbar layout, header div -->
     <!-- at 576px - 768px the dropdown icon is showing (not functional, but in line where it needs to be) -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Shot-Map</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,6 +26,42 @@
                 <a class="nav-link" href="#">Favorites</a>
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </div>
+            </div>
+        </div>
+    </nav>
+    <section id="main-contact-container" class="p-4 m-4 text-center d-flex align-items-center">
+        <form>
+            <div class="row d-flex">
+                <h1>Contact Us</h1>
+                <h3>If you have any questions, please fill out these fields with your information, and we will be happy to help you.</h3>
+                <div class="col">
+                    <input type="text" class="form-control pt-3" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control pt-3" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail"></label>
+                    <input type="text" class="form-control pt-3" id="contactEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control pt-3 mb-4" id="formGroupExampleInput" placeholder="Enter your message here..">
+                </div>
+                <div id="submitContactButtonDiv">    
+                    <button id="submitContactButton" type="button" class="btn btn-secondary btn-lg d-inline-flex justify-content-center pt-3 w-100">Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>    
+    <!-- footer div -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
+            <div class="navbar-nav">
+                <a class="nav-link " aria-current="page" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Favorites</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </div>
         </div>
     </nav>
