@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- navbar layout -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Shot-Map</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,18 +28,39 @@
           </div>
         </div>
       </nav>
-      <br/>
-      <p class="aboutp1">About Us</p>
-      <br/>
-      <p class="p2">The Shot-Map app allows our users to capture some of their favorite Wisconsin road trip moments. We want our user community
-                    to explore and share their experiences in different parks, hiking trails, restaurants or even festivals and the like! By
-                    signing up and taking a photo to upload it to our database, everyone in the Shot-Map community can add helpful content!
-      </p>
-      <br/>
-      <p>By taking the information in our database and displaying it on our app page, users can search for a city close to them or en route on their
+      <div class="about-main-container text-center">
+        <div class="row">
+          <div class="col-sm">
+            Filler
+          </div>
+          <div class="col-sm-10">
+            <br/>
+            <h2>About Us</h2>
+            <p class="p2">The Shot-Map app allows our users to capture some of their favorite Wisconsin road trip moments. We want our user community
+              to explore and share their experiences in different parks, hiking trails, restaurants or even festivals and the like! By
+              signing up and taking a photo to upload it to our database, everyone in the Shot-Map community can add helpful content!
+          </p>
+          <br/>
+          <p>By taking the information in our database and displaying it on our app page, users can search for a city close to them or en route on their
           travels that they want to visit and check out. Once they take a picture and upload it to the website, then other community members of Shot-Map
           can find cool areas to explore and take pictures at too!
-      </p>
-      <p>Vist our GitHub for Shot-Map <a href="file:///C:/bootcampgeneral/project2/Shot-map/index.html">here!</a></p>
+          </p>
+          <p>Vist our GitHub for Shot-Map <a href="https://github.com/JayARTman/Shot-map">here!</a></p>
+          </div>
+          <div class="col-sm">
+            Filler
+        </div>
+      </div>
+      <!-- footer div -->
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
+            <div class="navbar-nav">
+                <a class="nav-link " aria-current="page" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Favorites</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </div>
+        </div>
+      </nav>
 </body>
 </html>

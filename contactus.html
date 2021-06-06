@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <!-- navbar layout, header div -->
+    <!-- at 576px - 768px the dropdown icon is showing (not functional, but in line where it needs to be) -->
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Shot-Map</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link " aria-current="page" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Favorites</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </div>
+            </div>
+        </div>
+    </nav>
+    <section id="main-contact-container" class="p-4 m-4 text-center d-flex align-items-center">
+        <form>
+            <div class="row d-flex">
+                <h1>Contact Us</h1>
+                <h3>If you have any questions, please fill out these fields with your information, and we will be happy to help you.</h3>
+                <div class="col">
+                    <input type="text" class="form-control pt-3" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control pt-3" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail"></label>
+                    <input type="text" class="form-control pt-3" id="contactEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput"></label>
+                    <input type="text" class="form-control pt-3 mb-4" id="formGroupExampleInput" placeholder="Enter your message here..">
+                </div>
+                <div id="submitContactButtonDiv">    
+                    <button id="submitContactButton" type="button" class="btn btn-secondary btn-lg d-inline-flex justify-content-center pt-3 w-100">Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>    
+    <!-- footer div -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
+            <div class="navbar-nav">
+                <a class="nav-link " aria-current="page" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Favorites</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
