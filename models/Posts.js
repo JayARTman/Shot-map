@@ -22,7 +22,8 @@ Posts.init(
             references: {
                 model: 'cities',
                 key: 'id'
-            },
+            }
+        },    
         info: {
           type: DataTypes.STRING(300),
             allowNull: false,
@@ -34,7 +35,7 @@ Posts.init(
                 key: 'id'
             }
         }
-    }
+    
         // photo: {
         //     references: {
         //         type: DataTypes.STRING,
