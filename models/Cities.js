@@ -14,12 +14,12 @@ Cities.init(
         city_name: {
             type: DataTypes.STRING(50),
             allowNull: false
-        }
+        },
         // },
-        // state: {
-        //     type: DataTypes.STRING(17),
-        //     allowNull: false
-        // }
+        state: {
+            type: DataTypes.STRING(17),
+            allowNull: false
+        }
     },
     {
         sequelize,
