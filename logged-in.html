@@ -60,36 +60,35 @@
                     Filler
                   </div>
                   <div class="col-sm-10 align-self-center">
-                    <h3>Upload a new photo</h3>
+                    <h3>Upload a new photo:</h3>
                     <!-- dropdown button works, but we should make the list smaller with a scroll bar -->
                     <!-- bootstrap has a choose form to use for this -->
-                    <div class="dropdown">
-                        <button id="selectCitySignInBtn" class="btn btn-secondary dropdown-toggle pb-1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Select a City:
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                          <button class="dropdown-item" type="button">Appleton</button>
-                          <button class="dropdown-item" type="button">Beloit</button>
-                          <button class="dropdown-item" type="button">Brookfield</button>
-                          <button class="dropdown-item" type="button">Eau Claire</button>
-                          <button class="dropdown-item" type="button">Fond du Lac</button>
-                          <button class="dropdown-item" type="button">Green Bay</button>
-                          <button class="dropdown-item" type="button">Greenfield</button>
-                          <button class="dropdown-item" type="button">Janesville</button>
-                          <button class="dropdown-item" type="button">Kenosha</button>
-                          <button class="dropdown-item" type="button">La Crosse</button>
-                          <button class="dropdown-item" type="button">Madison</button>
-                          <button class="dropdown-item" type="button">Milwaukee</button>
-                          <button class="dropdown-item" type="button">New Berlin</button>
-                          <button class="dropdown-item" type="button">Oshkosh</button>
-                          <button class="dropdown-item" type="button">Racine</button>
-                          <button class="dropdown-item" type="button">Sheboygan</button>
-                          <button class="dropdown-item" type="button">Waukesha</button>
-                          <button class="dropdown-item" type="button">Wausau</button>
-                          <button class="dropdown-item" type="button">Wauwatosa</button>
-                          <button class="dropdown-item" type="button">West Allis</button>
-                        </div>
-                    </div>
+                    <div class="input-group justify-content-center">
+                      <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                        <option selected>Select a City:</option>
+                        <option id="1" class="dropdown-city-option" value="1">Appleton</option>
+                        <option id="2" class="dropdown-city-option" value="2">Beloit</option>
+                        <option id="3" class="dropdown-city-option" value="3">Brookfield</option>
+                        <option id="4" class="dropdown-city-option" value="4">Eau Claire</option>
+                        <option id="5" class="dropdown-city-option" value="5">Fond du Lac</option>
+                        <option id="6" class="dropdown-city-option" value="6">Green Bay</option>
+                        <option id="7" class="dropdown-city-option" value="7">Greenfield</option>
+                        <option id="8" class="dropdown-city-option" value="8">Janesville</option>
+                        <option id="9" class="dropdown-city-option" value="9">Kenosha</option>
+                        <option id="10" class="dropdown-city-option" value="10">La Crosse</option>
+                        <option id="11" class="dropdown-city-option" value="11">Madison</option>
+                        <option id="12" class="dropdown-city-option" value="12">Milwaukee</option>
+                        <option id="13" class="dropdown-city-option" value="13">New Berlin</option>
+                        <option id="14" class="dropdown-city-option" value="14">Oshkosh</option>
+                        <option id="15" class="dropdown-city-option" value="15">Racine</option>
+                        <option id="16" class="dropdown-city-option" value="16">Sheboygan</option>
+                        <option id="17" class="dropdown-city-option" value="17">Waukesha</option>
+                        <option id="18" class="dropdown-city-option" value="18">Wausau</option>
+                        <option id="19" class="dropdown-city-option" value="19">Wauwatosa</option>
+                        <option id="20" class="dropdown-city-option" value="20">West Allis</option>
+                      </select>
+                      <button type="button" class="btn btn-secondary">Search</button>
+                    </div>  
                     <br/>
                     <h4>Select a Picture:</h4>
                     <!-- 'w-25' is how to set bootstrap's width -->
@@ -110,7 +109,7 @@
                     <h4>Describe Your Journey!</h4>
                       <div class="row justify-content-center">
                         <div class="col-9">
-                            <div class="input-group-description mb-3 w-125">
+                            <div class="input-group-description mb-3">
                                 <input type="text" class="form-control" placeholder="Where are you? How did you find this cool area?" aria-label="" aria-describedby="basic-addon1">
                             </div>
                         </div>    
