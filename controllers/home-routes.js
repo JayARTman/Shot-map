@@ -1,5 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 
-//login in and out
+router.get('/', (req, res) => {
+    res.render('contactus');
+  });
+  
+ 
 module.exports = router;

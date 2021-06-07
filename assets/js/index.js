@@ -6,9 +6,9 @@ const searchBtn = document.getElementById('searchBtn');
 
 const showSearch = function() {
     console.log('button works');
-    var city = 'http://localhost:3008/api/post';
+   var city = 'http://127.0.0.1:3008/api/post';
     fetch(city)
-    .then((response) => console.log(response.json))
+    .then((response) => response.json)
     .then((data) => {
         console.log(data)
     })
