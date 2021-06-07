@@ -16,5 +16,9 @@ router.get('/loginform', (req, res) => {
 
 // const sequelize = require('../config/connection');
 
-//login in and out
+router.get('/', (req, res) => {
+    res.render('contactus');
+  });
+  
+ 
 module.exports = router;
