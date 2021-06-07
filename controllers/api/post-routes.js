@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../../config/connection');
 //const sequelize = require('../../config/connection');
 const { Posts, Users, Cities} = require('../../models')
 
@@ -19,7 +20,34 @@ router.post('/', (req, res) => {
 });
 //route for finding all posts
 router.get('/', (req, res) => {
-    Posts.findAll({})
+    Posts.findAll({
+      include: [{ model: Users, attributes: ['user_name']},
+      { model: Cities, attributes: ['city_name']}]
+    })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+})
+
+router.get('/:location', (req, res) => {
+    Posts.findAll({
+      where: {
+        location: req.params.location
+      },
+      include: [
+        {
+          model: Cities,
+          attributes: ['city_name']
+        },
+      {
+          model: Users,
+          attributes: ['user_name']
+        }
+      ]
+       
+    })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
       console.log(err);
