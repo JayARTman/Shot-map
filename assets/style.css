@@ -47,11 +47,7 @@ body {
 
 /* this adjusts the width of the select a city on index.html */
 .custom-select {
-    width: 325px;
-}
-
-.dropdown-city-option {
-    width: 4px;
+    width: 200px;
 }
 
 /* #selectCitySignInButton {
