@@ -29,7 +29,10 @@ router.get('/', (req,res) => {
 })
 
 router.get('/:user_name', (req, res) => {
-    Users.findOne({ where: { user_name: req.body }})
+    Users.findOne({ 
+      where: { user_name: req.params.user_name },
+      attributes: { exclude: ['password']}
+    })
     .then(dbUserData => {
         if(!dbUserData) {
             res.status(404)

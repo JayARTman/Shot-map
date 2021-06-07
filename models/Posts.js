@@ -12,22 +12,26 @@ Posts.init(
             primaryKey: true,
             allowNull: false
         },
+        
         title: {
             type: DataTypes.STRING(175),
             allowNull: false
         },
+
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'cities',
                 key: 'id'
-            }
-        },    
+            },
+        },
+
         info: {
           type: DataTypes.STRING(300),
             allowNull: false,
         },
+
         user_name: {
             type: DataTypes.INTEGER,
             references: {
