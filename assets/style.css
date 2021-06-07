@@ -50,8 +50,9 @@ body {
     width: 325px;
 }
 
-.dropdown-city-option {
-    width: 4px;
+.menu-scroll {
+    overflow-y: scroll;
+    max-height: 200px;
 }
 
 /* #selectCitySignInButton {
