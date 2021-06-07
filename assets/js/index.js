@@ -1,6 +1,7 @@
 //creating fetch request based on city choice
 const cityChoice = document.getElementById('inputGroupSelect04');
 const searchBtn = document.getElementById('searchBtn');
+const signUpBtn = document.getElementById('signUpBtn');
 
 
 
@@ -14,4 +15,10 @@ const showSearch = function() {
     })
 }
 
+// get user info function for user sign up
+const getUserInfo = function() {
+    console.log('getUserInfo works')
+}
+
+signUpBtn.addEventListener('click', getUserInfo)
 searchBtn.addEventListener('click', showSearch)
