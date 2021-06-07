@@ -16,10 +16,10 @@ Cities.init(
             allowNull: false
         },
         // },
-        state: {
-            type: DataTypes.STRING(17),
-            allowNull: false
-        }
+        // state: {
+        //     type: DataTypes.STRING(17),
+        //     allowNull: false
+        // }
     },
     {
         sequelize,

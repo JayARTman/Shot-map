@@ -6,8 +6,7 @@ const { Posts, Users, Cities} = require('../../models')
 
 router.post('/', (req, res) => {
     Cities.create({
-        city_name: req.body.city_name,
-        state: req.body.state
+        city_name: req.body.city_name
      })
      .then(dbCityData => res.json(dbCityData))
     .catch(err => {
