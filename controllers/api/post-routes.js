@@ -36,18 +36,17 @@ router.get('/:location', (req, res) => {
       where: {
         location: req.params.location
       },
-      attributes: [
-        'title',
-        'info',
-        'user_name',
-        [sequelize.literal('(SELECT COUNT(*) FROM posts WHERE posts.location = cities.id)'), 'location']
-      ],
       include: [
         {
           model: Cities,
-          attributes: ['id']
+          attributes: ['city_name']
+        },
+      {
+          model: Users,
+          attributes: ['user_name']
         }
       ]
+       
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

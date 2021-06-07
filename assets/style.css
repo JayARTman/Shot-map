@@ -45,6 +45,16 @@ body {
     margin-bottom: 1rem;
 }
 
+/* this adjusts the width of the select a city on index.html */
+.custom-select {
+    width: 325px;
+}
+
+.menu-scroll {
+    overflow-y: scroll;
+    max-height: 200px;
+}
+
 /* #selectCitySignInButton {
     padding-bottom: 2rem;
 } */
