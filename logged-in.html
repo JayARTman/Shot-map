@@ -11,13 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <!-- this is where the logo will go -->
     <title>Shot-map</title>
 </head>
 <body>
     <!-- navbar layout, header div -->
     <!-- at 576px - 768px the dropdown icon is showing (not functional, but in line where it needs to be) -->
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav id="header" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">Shot-Map</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +61,8 @@
                   </div>
                   <div class="col-sm-10 align-self-center">
                     <h3>Upload a new photo</h3>
-                    <!-- dropdown button works, but we should make the list smaller with a scroll bar, and add logic to select the city -->
+                    <!-- dropdown button works, but we should make the list smaller with a scroll bar -->
+                    <!-- bootstrap has a choose form to use for this -->
                     <div class="dropdown">
                         <button id="selectCitySignInBtn" class="btn btn-secondary dropdown-toggle pb-1" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Select a City:
