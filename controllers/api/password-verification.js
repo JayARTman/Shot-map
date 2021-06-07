@@ -25,4 +25,4 @@ const passwordVerify = function(userName, password) {
         res.status(500).json(err);
     })
 }
-module.exports = router;
+module.exports = passwordVerify;
