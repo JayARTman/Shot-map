@@ -20,7 +20,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '/assets')));
 
-
 app.use(routes);
 
 
