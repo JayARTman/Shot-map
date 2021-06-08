@@ -1,7 +1,8 @@
-const router = require('express').Router()
-
 const signUpButton = document.getElementById('signUpBtn');
+console.log(signUpButton);
+// const getUserInfo = function() {
+//     console.log('getUserInfo works')
+// }
+// getUserInfo();
 
-signUpButton.addEventListener('click', () => {
-    console.log('works');
-})
+// signUpButton.addEventListener('click', console.log('getUserInfo works'));
