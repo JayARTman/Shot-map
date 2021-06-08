@@ -21,7 +21,6 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-
 // const sequelize = require('../config/connection');
 
 // router.get('/', (req, res) => {
