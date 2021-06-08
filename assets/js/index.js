@@ -14,9 +14,9 @@ const signUpBtn = document.getElementById('signUpBtn');
 // }
 
 // get user info function for user sign up
-const getUserLogin = function() {
-    console.log('getUserLogin works')
-}
-
-signUpBtn.addEventListener('click', getUserLogin)
-searchBtn.addEventListener('click', showSearch)
+// const getUserInfo = function() {
+//     console.log('getUserInfo works')
+// }
+// getUserInfo();
+// signUpBtn.addEventListener('click', getUserInfo())
+// searchBtn.addEventListener('click', showSearch)
