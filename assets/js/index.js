@@ -2,8 +2,7 @@
 const cityChoice = document.getElementById('inputGroupSelect04');
 const searchBtn = document.getElementById('searchBtn');
 const signUpBtn = document.getElementById('signUpBtn');
-
-
+const Handlebars = require('handlebars');
 
 const showSearch = function() {
   //console.log('button works');
