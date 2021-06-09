@@ -6,4 +6,4 @@ const getUserLogin = function() {
     console.log('getUserLogin works')
 }
 
-logInBtn.addEventListener('click', getUserLogin)
+logInBtn.addEventListener('click', getUserLogin());
