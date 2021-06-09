@@ -7,165 +7,48 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    {{!-- <script type='text/javascript' src='/js/index.js'></script> --}}
     <!-- this is where the logo will go -->
     <title>Shot-map</title>
 </head>
 <body>
-    <!-- navbar layout, header div -->
-    <!-- at 576px - 768px the dropdown icon is showing (not functional, but in line where it needs to be) -->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" href="#">Shot-Map</a>
+      <a class="navbar-brand" href="/">Shot-Map</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="./about.html">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contactus.html">Contact</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>   
         </ul>
       </div>  
     </nav>
-    <!-- main div that holds top(hero) middle(signup) and lower(upload) divs-->
-    <section class="main-container text-center">
-        <div class="row">
-          <div class="col-sm">
-            <!-- hero div -->
-            <article class="hero-container bg-primary">
-                <div class="row">
-                    <!-- filler is used for the empty spacing on the left and right sides of the center grid, which is where our stuff will be -->
-                    <!-- KEEP THESE! -->
-                  <div class="col-sm">
-                      Filler
-                  </div>
-                  <div class="col-sm-10">
-                    <h2>Search for photos in Wisconsin cities!</h2>  
-                    <div class="row justify-content-center">
-                        <div class="col-9">
-                          <div class="input-group justify-content-center">
-                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                              <option selected>Choose...</option>
-                              <option id="1" class="dropdown-city-option" value="1">Appleton</option>
-                              <option id="2" class="dropdown-city-option" value="2">Beloit</option>
-                              <option id="3" class="dropdown-city-option" value="3">Brookfield</option>
-                              <option id="4" class="dropdown-city-option" value="4">Eau Claire</option>
-                              <option id="5" class="dropdown-city-option" value="5">Fond du Lac</option>
-                              <option id="6" class="dropdown-city-option" value="6">Green Bay</option>
-                              <option id="7" class="dropdown-city-option" value="7">Greenfield</option>
-                              <option id="8" class="dropdown-city-option" value="8">Janesville</option>
-                              <option id="9" class="dropdown-city-option" value="9">Kenosha</option>
-                              <option id="10" class="dropdown-city-option" value="10">La Crosse</option>
-                              <option id="11" class="dropdown-city-option" value="11">Madison</option>
-                              <option id="12" class="dropdown-city-option" value="12">Milwaukee</option>
-                              <option id="13" class="dropdown-city-option" value="13">New Berlin</option>
-                              <option id="14" class="dropdown-city-option" value="14">Oshkosh</option>
-                              <option id="15" class="dropdown-city-option" value="15">Racine</option>
-                              <option id="16" class="dropdown-city-option" value="16">Sheboygan</option>
-                              <option id="17" class="dropdown-city-option" value="17">Waukesha</option>
-                              <option id="18" class="dropdown-city-option" value="18">Wausau</option>
-                              <option id="19" class="dropdown-city-option" value="19">Wauwatosa</option>
-                              <option id="20" class="dropdown-city-option" value="20">West Allis</option>
-                            </select>
-                            <button type="button" class="btn btn-secondary" id="searchBtn">Search</button>
-                          </div>  
-                        </div>    
-                    </div> 
-                  </div>
-                  <div class="col-sm">
-                      Filler
-                  </div>
-                </div>
-            </article>
-            <!-- sign-up div -->
-            <article class="sign-up-container flex-d bg-danger">
-                <div class="row">
-                  <div class="col-sm">
-                    Filler
-                  </div>
-                  <!-- made the buttons as links for now -->
-                  <div class="col-sm-10 align-self-center">
-                    <h3>Log in to upload and share your city pictures with the SHOT MAP community.</h3> 
-                    <a type="button" class="btn btn-secondary pb-1" href="./logged-in.html">Log in</a>
-                    <br/>
-                    <br/>
-                    <h3>Not a member of the SHOT-MAP community yet!? SIGN UP now!</h3>
-                    <a type="button" class="btn btn-secondary pb-1" href="./signup.html">
-                      Sign up
-                    </a>
-                    <br/>
-                    <br/>
-                  </div>
-                  <div class="col-sm">
-                    Filler
-                  </div>
-                </div>
-            </article>
-            <!-- Uploaded images div -->
-            <article class="upload-images-container">
-              <div class="row">
-                  <h4>Latest Uploads:</h4>
-                <div class="col-sm">
-                    Filler
-                </div>
-                <div class="col-sm-10"> 
-                    <section class="row justify-content-center">
-                        <div class="col-sm-10">
-                            <div class="container">
-                                <div class="row">
-                                  <div class="col">
-                                    <div class="img">
-                                        <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                      <div class="img">
-                                          <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
-                                      </div>
-                                  </div>
-                                  <div class="w-100">
-                                      <br/>
-                                      <br/>
-                                  </div>
-                                  <div class="col">
-                                    <div class="img">
-                                        <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
-                                    </div>
-                                  </div>
-                                  <div class="col">
-                                    <div class="img">
-                                        <img src="./assets/images/150.png" alt="..." class="img-thumbnail">
-                                    </div>
-                                  </div>
-                                </div>
-                              </div> 
-                        </div>
-                    </section>
-                </div>
-                <div class="col-sm">
-                    Filler
-                </div>
-              </div>
-            </article>
-            <!-- footer div -->
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
-                    <div class="navbar-nav">
-                        <a class="nav-link " aria-current="page" href="./about.html">About</a>
-                        <a class="nav-link" href="./contactus.html">Contact</a>
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
-                    </div>
-                </div>
-            </nav>
-          </div>
+    <main id='main'>
+        {{{ body }}}
+    </main>
+    <!-- footer div -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
+            <div class="navbar-nav">
+                <a class="nav-link " aria-current="page" href="/about">About</a>
+                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </div>
         </div>
-    </section>
+    </nav>
+    <script type='text/javascript' src='../../assets/js/index.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
