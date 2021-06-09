@@ -1,5 +1,5 @@
     <!-- sign up form -->
-  <body>
+  <body id='body'>
     <script src='/js/sign-up.js'></script>
     <div class="container">
         <div class="row">
@@ -15,16 +15,39 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Email</label>
-                    <input type="email" autocomplete="username" class="form-control" id="inputEmail4" placeholder="Email">
+                    <input type="email" autocomplete="username" class="form-control" id="email" placeholder="Email">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Password</label>
-                    <input type="password" autocomplete="current-password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <input type="password" autocomplete="current-password" class="form-control" id="password" placeholder="Password">
                   </div>
                 </div>
                 <br/>
-                <button id="signUpBtn" type="submit" class="btn btn-secondary">Submit</button>
+                <button id="btn" type="submit" class="btn btn-secondary">Submit</button>
             </form>
         </div>
     </div>
+    <script>
+      const btn = document.getElementById('btn');
+
+      const submitForm = function() {
+        const fname = document.getElementById('fname').value;
+        const lname = document.getElementById('lname').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        fetch('/api/user', {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' }
+        })
+
+        
+      }
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        submitForm();
+      })
+      
+      
+    </script>
   </body>
