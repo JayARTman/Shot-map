@@ -6,13 +6,13 @@
             <form class="sign-up-form">
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label for="fname">First Name</label>
+                    <label for="fname">User Name</label>
                     <input type="firstname" class="form-control" id="fname" placeholder="First Name">
                   </div>
-                  <div class="form-group col-md-6">
+                  {{!-- <div class="form-group col-md-6">
                     <label for="lname">Last Name</label>
                     <input type="lastname" class="form-control" id="lname" placeholder="Last Name">
-                  </div>
+                  </div> --}}
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Email</label>
                     <input type="email" autocomplete="username" class="form-control" id="email" placeholder="Email">
@@ -32,13 +32,24 @@
 
       const submitForm = function() {
         const fname = document.getElementById('fname').value;
-        const lname = document.getElementById('lname').value;
+        
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         
         fetch('/api/user', {
-          method: 'GET',
-          headers: { 'Content-Type': 'application/json' }
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            'user_name': fname,
+            'email': email,
+            'password': password
+          })
+        })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data)
         })
 
         
