@@ -74,7 +74,7 @@
                     <section id='content' class="d-flex justify-content-between p-2">
 
                       <script  type='text/x-handlebars-template' id="posts-template">
-                        {{#each data}}
+                        
                         <!-- first picture info div, still working out the details of how to add more in uniform with style -->
                         {{!-- {{#each context}} --}}
                         <article class="border">
@@ -91,11 +91,10 @@
                               <p>Description: {{ description }}</p>
                           </div>
                         </article>
-                        {{/each}}
-                      </script> 
+                        
                         
                         <!-- another picture div -->
-                        {{!-- <article class="border">
+                        <article class="border">
                             <div id="userNameDiv2">
                               <p>Username</p>
                             </div>
@@ -108,8 +107,9 @@
                             <div id="descriptionDiv2">
                               <p>Description of picture.</p>
                             </div>
-                        </article>  --}}
-                        {{!-- {{/each}} --}}
+                        </article>  
+                        
+                      </script> 
 
                     </section>
                 </div>
