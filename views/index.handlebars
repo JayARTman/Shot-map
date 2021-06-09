@@ -74,26 +74,28 @@
                     <section id='content' class="d-flex justify-content-between p-2">
 
                       <script  type='text/x-handlebars-template' id="posts-template">
-                        
+                        {{#each data}}
                         <!-- first picture info div, still working out the details of how to add more in uniform with style -->
-                        {{#each postInfo}}
+                        {{!-- {{#each context}} --}}
                         <article class="border">
                           <div id="userNameDiv">
-                              <p>{{this.username}}</p>
+                              <p>{{1.user.user_name}}</p>
                           </div>
                           <div id="uploadedPictureDiv">
                               <img src="../assets/images/150.png">
                           </div>
                           <div id="CityName1">
-                            {{this.city}}
+                            {{0.city.city_name}}
                           </div>
                           <div id="descriptionDiv">
                               <p>Description: {{ description }}</p>
                           </div>
                         </article>
+                        {{/each}}
+                      </script> 
                         
                         <!-- another picture div -->
-                        <article class="border">
+                        {{!-- <article class="border">
                             <div id="userNameDiv2">
                               <p>Username</p>
                             </div>
@@ -106,9 +108,8 @@
                             <div id="descriptionDiv2">
                               <p>Description of picture.</p>
                             </div>
-                        </article> 
-                        {{/each}}
-                      </script> 
+                        </article>  --}}
+                        {{!-- {{/each}} --}}
 
                     </section>
                 </div>
