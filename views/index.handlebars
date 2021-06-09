@@ -71,20 +71,23 @@
                   <h4 class="pt-1">Latest Uploads:</h4>
                 <div id="filler" class="col-sm"></div>
                 <div class="col-sm-6"> 
-                    <section class="d-flex justify-content-between p-2">
+                    <section id='content' class="d-flex justify-content-between p-2">
+
+                      <script  type='text/x-handlebars-template' id="posts-template">
+
                         <!-- first picture info div, still working out the details of how to add more in uniform with style -->
                         <article class="border">
                           <div id="userNameDiv">
-                              <p>Username</p>
+                              <p>{{Username}}</p>
                           </div>
                           <div id="uploadedPictureDiv">
                               <img src="../assets/images/150.png">
                           </div>
                           <div id="CityName1">
-                            City Name
+                            {{city_name}}
                           </div>
                           <div id="descriptionDiv">
-                              <p>Description of picture.</p>
+                              <p>Description: {{ description }}</p>
                           </div>
                         </article>
                         <!-- another picture div -->
@@ -101,7 +104,10 @@
                             <div id="descriptionDiv2">
                               <p>Description of picture.</p>
                             </div>
-                        </article>  
+                        </article> 
+
+                      </script> 
+
                     </section>
                 </div>
                 <div id="filler" class="col-sm"></div>
@@ -110,4 +116,5 @@
           </div>
         </div>
     </section>
+    <script src='/js/index.js'></script>
   </body>
