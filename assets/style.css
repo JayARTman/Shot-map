@@ -38,13 +38,6 @@ body {
     font-size: 1.4rem;
 }
 
-.card {
-    padding: 0rem;
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 1rem;
-}
-
 /* this adjusts the width of the select a city on index.html */
 .custom-select {
     width: 325px;
@@ -54,18 +47,6 @@ body {
     overflow-y: scroll;
     max-height: 200px;
 }
-
-/* #selectCitySignInButton {
-    padding-bottom: 2rem;
-} */
-
-/* placeholder font style end */
-
-/* .menu {
-    text-align: center;
-} */
-
-/* index.html style end */
 
 /* about.html style start */
 

@@ -7,40 +7,44 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    {{!-- <script type='text/javascript' src='/js/index.js'></script> --}}
     <!-- this is where the logo will go -->
     <title>Shot-map</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" href="#">Shot-Map</a>
+      <a class="navbar-brand" href="/">Shot-Map</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="./about.html">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contactus.html">Contact</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>   
         </ul>
       </div>  
     </nav>
-    <main>
-        {{{ anything }}}
+    <main id='main'>
+        {{{ body }}}
     </main>
     <!-- footer div -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid d-flex flex-row justify-content-center align-items-center">
             <div class="navbar-nav">
-                <a class="nav-link " aria-current="page" href="./about.html">About</a>
-                <a class="nav-link" href="./contactus.html">Contact</a>
+                <a class="nav-link " aria-current="page" href="/about">About</a>
+                <a class="nav-link" href="/contact">Contact</a>
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
             </div>
         </div>
     </nav>
+    <script type='text/javascript' src='../../assets/js/index.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/index.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
