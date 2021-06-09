@@ -49,7 +49,9 @@
           return res.json();
         })
         .then((data, errors) => {
-          
+          if(!data.id) {
+            alert(data.errors[0].message);
+          }
           console.log(data);
           
         });
