@@ -20,5 +20,5 @@ const getUserInfo = function() {
     console.log('getUserInfo works')
 }
 
-signUpBtn.addEventListener('click', getUserInfo)
+//signUpBtn.addEventListener('click', getUserInfo)
 searchBtn.addEventListener('click', showSearch)
