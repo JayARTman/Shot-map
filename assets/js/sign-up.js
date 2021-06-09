@@ -19,8 +19,12 @@ const btn = document.getElementById('btn');
           return res.json();
         })
         .then((data) => {
-          console.log(data)
-        })
+          if(!data.id) {
+            alert(data.errors[0].message);
+          }
+          console.log(data);
+          
+        });
 
         
       }

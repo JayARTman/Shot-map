@@ -90,7 +90,7 @@
                         <!-- another picture div -->
                         <article class="border">
                             <div id="userNameDiv2">
-                              <p>Username</p>
+                              <p>Username {{ username }}</p>
                             </div>
                             <div id="uploadedPictureDiv2">
                               <img src="../assets/images/150.png">
@@ -110,4 +110,23 @@
           </div>
         </div>
     </section>
+    <script src='/js/index.js'></script>
+    <script>
+      const functional = function() {
+
+      
+        fetch('/api/post', {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+          
+        });
+      };
+      functional();
+
+    </script>
   </body>
