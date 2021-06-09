@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3008
 
 const sequelize = require('./config/connection');
 
-const routes = require('./controllers');
+//const routes = require('./controllers');
 
 const hbs = exphbs.create({});
 
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '/assets')));
 
-app.use(routes);
+app.use(require('./controllers'));
 
 
 sequelize.sync({ force: false }).then(() => {
