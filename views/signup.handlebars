@@ -7,7 +7,7 @@
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="fname">User Name</label>
-                    <input type="firstname" class="form-control" id="fname" placeholder="First Name">
+                    <input type="firstname" class="form-control" id="fname" placeholder="User Name">
                   </div>
                   {{!-- <div class="form-group col-md-6">
                     <label for="lname">Last Name</label>
@@ -27,5 +27,46 @@
             </form>
         </div>
     </div>
+<<<<<<< HEAD
     <script>src="../js/sign-up.js"</script>
+=======
+    <script>
+      const btn = document.getElementById('btn');
+
+      const submitForm = function() {
+        const fname = document.getElementById('fname').value;
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        fetch('/api/user', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            'user_name': fname,
+            'email': email,
+            'password': password
+          })
+        })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data, errors) => {
+          if(!data.id) {
+            alert(data.errors[0].message);
+          }
+          console.log(data);
+          
+        });
+
+        
+      }
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        submitForm();
+      })
+      
+      
+    </script>
+>>>>>>> 3de6bb66c88d22c630b6ade64a1f35cac686f150
   </body>
