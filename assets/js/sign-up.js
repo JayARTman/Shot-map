@@ -18,7 +18,7 @@ const btn = document.getElementById('btn');
         .then((res) => {
           return res.json();
         })
-        .then((data, errors) => {
+        .then((data) => {
           if(!data.id) {
             alert(data.errors[0].message);
           }
