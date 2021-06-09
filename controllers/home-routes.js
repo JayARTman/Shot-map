@@ -1,5 +1,6 @@
 const path = require('path');
 const router = require('express').Router();
+const { Posts, Users, Cities} = require('../models')
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -20,6 +21,7 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
+
 
 // const sequelize = require('../config/connection');
 
