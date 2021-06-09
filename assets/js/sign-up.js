@@ -18,13 +18,9 @@ const btn = document.getElementById('btn');
         .then((res) => {
           return res.json();
         })
-        .then((data, errors) => {
-          if(!data.id) {
-            alert(data.errors[0].message);
-          }
-          console.log(data);
-          
-        });
+        .then((data) => {
+          console.log(data)
+        })
 
         
       }
