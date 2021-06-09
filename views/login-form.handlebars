@@ -1,6 +1,6 @@
 <!-- log in form -->
 <body>
-    <script src="/js/log-in.js"></script>
+    {{!-- <script src="/js/log-in.js"></script> --}}
         <main id="mainLogInContainer" class="d-flex justify-content-center p-4 m-4">
             <form>
                 <h4>Enter User Information</h4>
@@ -20,4 +20,18 @@
                 <button id="logInBtn" type="button" class="btn btn-secondary w-100">Log In</button>
             </form>
         </main>  
+        <script>
+            //const passwordVerify = require('../../controller/api/password-verification.js');
+            const logInBtn = document.getElementById('logInBtn');
+
+            // get user info function for user sign up
+            const getUserLogin = function() {
+                let username = document.getElementById('username').value;
+                let password = document.getElementById('inputPassword').value;
+                console.log('function works');
+                //console.log('Username is' + username + 'and your password is' + inputPassword);
+            }
+
+            logInBtn.addEventListener('click', getUserLogin);
+        </script>
 </body>
