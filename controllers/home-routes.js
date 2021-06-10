@@ -14,7 +14,12 @@ router.get('/contact', (req, res) => {
     res.render('contactus');
 });
 
+//if user is logged in, takes them back to home page
 router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     res.render('login-form');
 });
 
@@ -22,12 +27,9 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-
-// const sequelize = require('../config/connection');
-
-// router.get('/', (req, res) => {
-//     res.render('contactus');
-//   });
+router.get('/', (req, res) => {
+    console.log(req.session);
   
+});
  
 module.exports = router;
