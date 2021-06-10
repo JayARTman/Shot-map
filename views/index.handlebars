@@ -67,47 +67,22 @@
             </article>
             <!-- Uploaded images div -->
             <article class="upload-images-container">
-              <div class="row">
+              <div class="container-fluid">
                   <h4 class="pt-1">Latest Uploads:</h4>
-                <div id="filler" class="col-sm"></div>
-                <div class="col-sm-6"> 
-                    <section class="d-flex justify-content-between p-2">
-                        <!-- first picture info div, still working out the details of how to add more in uniform with style -->
-                        <article class="border">
-                          <div id="userNameDiv">
-                              <p>Username</p>
-                          </div>
-                          <div id="uploadedPictureDiv">
-                              <img src="../assets/images/150.png">
-                          </div>
-                          <div id="CityName1">
-                            City Name
-                          </div>
-                          <div id="descriptionDiv">
-                              <p>Description of picture.</p>
-                          </div>
-                        </article>
-                        <!-- another picture div -->
-                        <article class="border">
-                            <div id="userNameDiv2">
-                              <p>Username</p>
-                            </div>
-                            <div id="uploadedPictureDiv2">
-                              <img src="../assets/images/150.png">
-                            </div>
-                            <div id="CityName2">
-                              City Name
-                            </div>
-                            <div id="descriptionDiv2">
-                              <p>Description of picture.</p>
-                            </div>
-                        </article>  
-                    </section>
-                </div>
-                <div id="filler" class="col-sm"></div>
+                {{!-- <div id="filler" class="col-sm"></div> --}}
+                
+                    <div id='content' class="d-flex justify-content-center p-2 row">
+                      
+                        <script  type='text/x-handlebars-template' id="posts-template">
+                        
+                        </script> 
+                    </div>
+                
+                
               </div>
             </article>
           </div>
         </div>
     </section>
+    <script src='/js/index.js'></script>
   </body>

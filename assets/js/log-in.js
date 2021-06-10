@@ -7,11 +7,12 @@ const getUserLogin = function() {
     let password = document.getElementById('password').value;
     //console.log('Username is ' + username + ' and your password is ' + password);
 
-    fetch('/:user_name', {
-        method: 'GET',
+    fetch('/login', {
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          'user_name': username,
+          'user_name': fname,
+          'email': email,
           'password': password
         })
       })
