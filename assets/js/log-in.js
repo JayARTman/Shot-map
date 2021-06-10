@@ -8,16 +8,14 @@ const getUserLogin = function() {
     //console.log('Username is ' + username + ' and your password is ' + password);
 
     fetch('/login', {
-        method: 'POST',
+        method: 'GET',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          'user_name': fname,
-          'email': email,
-          'password': password
-        })
+        body: undefined
       })
       .then((res) => {
+        console.log(res.json());
         return res.json();
+        
       })
       .then((data) => {
         if(!data.id) {
