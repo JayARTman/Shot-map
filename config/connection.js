@@ -14,8 +14,9 @@ const Sequelize = require('sequelize');
 //       },
 //     });
 
-const sequelize = new Sequelize('shot_map', 'root', 'Superimportantsequel1423!', {
-    host: 'localhost',
+
+const sequelize = new Sequelize('shot_map', 'root', 'Valandme123!', {
+     host: 'localhost',
     dialect: 'mysql'
 });
 // const sequelize = process.env.JAWSDB_URL

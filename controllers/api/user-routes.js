@@ -9,10 +9,12 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-    .then(dbUserData => res.json(dbUserData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+  
+      res.json(dbUserData);
     });
 });
 
@@ -62,10 +64,16 @@ router.post('/login', (req, res) => {
         res.status(400).json({ message: 'Thats not your password!' });
         return;
       }
+
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
   
       res.json({ user: dbUserData, message: 'You did it!' });
       });
-    });
+    })
+  });
   
 
 module.exports = router;

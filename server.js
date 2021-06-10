@@ -20,6 +20,8 @@ const sess = {
     })
   };
 
+app.use(session(sess));
+
 const hbs = exphbs.create({});
 
 app.engine('handlebars', hbs.engine);
