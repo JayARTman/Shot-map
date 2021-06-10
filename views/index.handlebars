@@ -71,27 +71,33 @@
                   <h4 class="pt-1">Latest Uploads:</h4>
                 <div id="filler" class="col-sm"></div>
                 <div class="col-sm-6"> 
-                    <section id='content' class="d-flex justify-content-between p-2">  
+                    <section id='content' class="d-flex justify-content-between p-2">
+                      <div class='border'>
+                        <script  type='text/x-handlebars-template' id="posts-template">
+                        
+                        </script>
+                      </div>
+                        
                         <!-- first picture info div, still working out the details of how to add more in uniform with style -->
-     
-                        <div class="border">
-                          <div id="userNameDiv">
-                              <p>User Name{{user_name}}</p>
-                          </div>
-                          <div id="uploadedPictureDiv">
+                        {{!-- <div class="border">
+                        
+                        
+                          {{!-- <div id="userNameDiv"> --}}
+                              <p>UserName{{user_name}}</p>
+                          {{!-- </div> --}}
+
+                          {{!-- <div id="uploadedPictureDiv"> --}}
                               <img src="../assets/images/150.png">
-                          </div>
-                          <div id="CityName1">
-                            <p>City{{this.city.city_name}}</p>
-                          </div>
-                          <div id="descriptionDiv">
-                              <p>Description of Picture {{ this.title }}</p>
-                          </div>
-                        </div> 
-                      
+                          {{!-- </div> --}}
+                          {{!-- <div id="CityName1"> --}}
+                            <p>City Name{{city}}</p>
+                          {{!-- </div> --}}
+                          {{!-- <div id="descriptionDiv"> --}}
+                              <p>Description of post: {{ description }}</p>
+                          {{!-- </div> --}}
                         
-                        
-                        <!-- another picture div -->
+                        </div>  --}}
+                        {{!-- <!-- another picture div -->
                         <div class="border">
                             <div id="userNameDiv2">
                               <p>Username</p>
@@ -105,8 +111,9 @@
                             <div id="descriptionDiv2">
                               <p>Description of picture.</p>
                             </div>
-                        </div>  
+                        </div>   --}}
 
+                      {{!-- </script> --}}
                     </section>
                 </div>
                 <div id="filler" class="col-sm"></div>
@@ -115,5 +122,5 @@
           </div>
         </div>
     </section>
-    <script src='../assets/js/index.js'></script>
+    <script src='/js/index.js'></script>
   </body>
