@@ -45,6 +45,29 @@ router.get('/:user_name', (req, res) => {
     })
 })
 
+router.post('/login', (req, res) => {
+    Users.findOne({
+      where: {
+        email: req.body.email
+      }
+    }).then(dbUserData => {
+      if (!dbUserData) {
+        res.status(400).json({ message: 'Must be a wrong email address!' });
+        return;
+      }
+  
+      const validPassword = dbUserData.checkPassword(req.body.password);
+  
+      if (!validPassword) {
+        res.status(400).json({ message: 'Thats not your password!' });
+        return;
+      }
+  
+      res.json({ user: dbUserData, message: 'You did it!' });
+      });
+    });
+  
+
 module.exports = router;
 
 
