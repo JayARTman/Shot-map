@@ -10,13 +10,13 @@ const fetchData = function() {
                          
         {{#each data}}
         
-        <div class="card m-4 h-50" style="width: 18rem;">
-            <p class="card-text">{{this.title}}</p>
-            <img class="card-img-top" src="/images/150.png" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">{{this.user.user_name}}</p>
-                <p class="card-text">{{this.city.city_name}}</p>
-                <p class="card-text">{{this.info}}</p>
+        <div class="card h-25 mw-25 ml-auto mr-auto mb-2" style="width: 10rem;">
+            <p class="m-0">{{this.title}}</p>
+            <img class="card-img-top img-fluid img-thumbnail" src="/images/150.png" alt="Card image cap">
+            <div class="p-2">
+                <p class="card-text m-0">{{this.user.user_name}}</p>
+                <p class="card-text m-0">{{this.city.city_name}}</p>
+                
             </div>
         </div>
         
