@@ -10,25 +10,15 @@ const fetchData = function() {
                          
         {{#each data}}
         
-            <div class='col-md-4 w-25 border m-auto'>   
-                <div>
-                    <p>{{this.title}} </p>
-                </div>         
-                <div>
-                    <p>{{this.user.user_name}}</p>
-            
-                </div>
-                <div>
-            
-                    <img src="/images/150.png">
-                </div>
-                <div>
-                    <p>Where:{{this.city.city_name}}</p>
-                </div>
-                <div>
-                    <p>About: {{ this.info }}</p>
-                </div>
+        <div class="card m-4 h-50" style="width: 18rem;">
+            <p class="card-text">{{this.title}}</p>
+            <img class="card-img-top" src="/images/150.png" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text">{{this.user.user_name}}</p>
+                <p class="card-text">{{this.city.city_name}}</p>
+                <p class="card-text">{{this.info}}</p>
             </div>
+        </div>
         
         {{/each}}
         `);
