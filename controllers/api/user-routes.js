@@ -8,7 +8,8 @@ router.post('/', (req, res) => {
         user_name: req.body.user_name,
         email: req.body.email,
         password: req.body.password
-    })
+
+    }).then(dbUserData => {
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
@@ -16,6 +17,7 @@ router.post('/', (req, res) => {
   
       res.json(dbUserData);
     });
+})
 });
 
 router.get('/', (req,res) => {
@@ -48,9 +50,10 @@ router.get('/:user_name', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
+  console.log('hello there')
     Users.findOne({
       where: {
-        email: req.body.email
+        email: req.body.userEmail
       }
     }).then(dbUserData => {
       if (!dbUserData) {
