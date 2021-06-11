@@ -1,34 +1,29 @@
 const btn = document.getElementById('btn');
 
-      const submitForm = function() {
-        const fname = document.getElementById('fname').value;
-        
+      async function submitForm(event) {
+        event.preventDefault();
+
+        const user_name = document.getElementById('fname').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         
-        fetch('/api/user', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            'user_name': fname,
-            'email': email,
-            'password': password
-          })
-        })
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          if(!data.id) {
-            alert(data.errors[0].message);
-          }
-          console.log(data);
+        if(user_name && email && password){
+          const response =  await fetch('/api/user', {
+            method: 'post',
           
+             body: JSON.stringify({
+              user_name,
+              email,
+              password
+            }),
+            headers: { 'Content-Type': 'application/json' },
         });
-
-        
+        if (response.ok) {
+          document.location.replace('logged-in');
+        } else {
+          alert(console.log('Nope'))
+        }
       }
-      btn.addEventListener('click', (event) => {
-        event.preventDefault();
-        submitForm();
-      })
+    }
+     
+    document.querySelector('.btn').addEventListener('click', submitForm)
