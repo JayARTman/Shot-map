@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
-//const { createPoolCluster } = require('mysql2');
+
 
 class Users extends Model {
     checkPassword(test){
