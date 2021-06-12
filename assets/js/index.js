@@ -1,11 +1,19 @@
+
+
+let btn = document.getElementById("searchBtn");
+
 const fetchData = function() {
-    const url = '/api/post'
+    
+    var input = document.getElementById("inputGroupSelect04");
+    var inputSelect = input.value;
+    var finalSelect = inputSelect.toString()
+    console.log(inputSelect)
+    const url = '/api/post/' + finalSelect;
     fetch(url, {
         method: 'GET',
     })
     .then(res => res.json())
     .then(data => {
-        const script = document.getElementById('posts-template').innerHTML;
         const template = Handlebars.compile(`
                          
         {{#each data}}
@@ -33,5 +41,5 @@ const fill = function() {
     
     
 }
-fetchData()
+btn.addEventListener('click', fetchData)
 
