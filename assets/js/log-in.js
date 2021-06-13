@@ -5,25 +5,23 @@ const logInBtn = document.getElementById('logInBtn');
 const getUserLogin = function() {
     let username = document.getElementById('email').value;
     let password = document.getElementById('password').value;
+    console.log(username)
     //console.log('Username is ' + username + ' and your password is ' + password);
-
-    fetch('/login', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-        body: undefined
-      })
-      .then((res) => {
-        console.log(res.json());
-        return res.json();
-        
-      })
-      .then((data) => {
-        if(!data.id) {
-          alert(data.errors[0].message);
-        }
-        console.log(data);
-        
-      });
+    let fetchUrl = 'api/user/:' + username
+    fetch('api/user', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: {
+        'user_name': username,
+        'password': password
+      }
+    })
+    .then((res) => res.json())
+    .then(data => {
+      console.log(data)
+    })
 
 }
 

@@ -3,24 +3,27 @@ const { Posts, Users, Cities} = require('../../models');
 
 
 
+
 router.post('/', (req, res) => {
-    Users.create({
-        user_name: req.body.user_name,
-        email: req.body.email,
-        password: req.body.password
-    })
-    req.session.save(() => {
-      req.session.user_id = dbUserData.id;
-      req.session.username = dbUserData.username;
-      req.session.loggedIn = true;
-  
-      res.json(dbUserData);
-    });
+  Users.create({
+      user_name: req.body.user_name,
+      email: req.body.email,
+      password: req.body.password
+  })
+  // req.session.save(() => {
+  //   req.session.user_id = dbUserData.id;
+  //   req.session.username = dbUserData.username;
+  //   req.session.loggedIn = true;
+  .then(dbUserData => res.json(dbUserData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get('/', (req,res) => {
   Users.findAll({
-    attributes: { exclude: ['password']}
+    // attributes: { exclude: ['password']}
   })
   .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -31,8 +34,8 @@ router.get('/', (req,res) => {
 
 router.get('/:user_name', (req, res) => {
     Users.findOne({ 
-      where: { user_name: req.params.user_name },
-      attributes: { exclude: ['password']}
+      where: { user_name: req.params.user_name }
+      // attributes: { exclude: ['password']}
     })
     .then(dbUserData => {
         if(!dbUserData) {
@@ -50,7 +53,8 @@ router.get('/:user_name', (req, res) => {
 router.post('/login', (req, res) => {
     Users.findOne({
       where: {
-        email: req.body.email
+        user_name: req.body.user_name,
+        password: req.body.password
       }
     }).then(dbUserData => {
       if (!dbUserData) {
@@ -72,6 +76,10 @@ router.post('/login', (req, res) => {
   
       res.json({ user: dbUserData, message: 'You did it!' });
       });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     })
   });
   
