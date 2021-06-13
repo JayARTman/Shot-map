@@ -1,6 +1,8 @@
 
 
 // get user info function for user sign up
+
+
 async function getUserLogin(event) {
   event.preventDefault();
   
@@ -23,6 +25,7 @@ async function getUserLogin(event) {
         alert(response.statusText);
       }
     }
+
 }
       
 document.querySelector('#logInBtn').addEventListener('click', getUserLogin)
