@@ -3,6 +3,7 @@ const { Posts, Users, Cities} = require('../../models');
 
 
 
+
 router.post('/', (req, res) => {
     Users.create({
         user_name: req.body.user_name,
@@ -18,11 +19,12 @@ router.post('/', (req, res) => {
       res.json(dbUserData);
     });
 })
+
 });
 
 router.get('/', (req,res) => {
   Users.findAll({
-    attributes: { exclude: ['password']}
+    // attributes: { exclude: ['password']}
   })
   .then(dbUserData => res.json(dbUserData))
     .catch(err => {
@@ -33,8 +35,8 @@ router.get('/', (req,res) => {
 
 router.get('/:user_name', (req, res) => {
     Users.findOne({ 
-      where: { user_name: req.params.user_name },
-      attributes: { exclude: ['password']}
+      where: { user_name: req.params.user_name }
+      // attributes: { exclude: ['password']}
     })
     .then(dbUserData => {
         if(!dbUserData) {
@@ -54,6 +56,7 @@ router.post('/login', (req, res) => {
     Users.findOne({
       where: {
         email: req.body.userEmail
+
       }
     }).then(dbUserData => {
       if (!dbUserData) {
@@ -75,6 +78,10 @@ router.post('/login', (req, res) => {
   
       res.json({ user: dbUserData, message: 'You did it!' });
       });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     })
   });
 
