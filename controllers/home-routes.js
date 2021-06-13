@@ -17,15 +17,23 @@ router.get('/contact', (req, res) => {
 // if user is logged in, takes them back to home page
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('logged-in');
         return;
     }
     res.render('login-form');
 });
 
 router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('logged-in');
+        return;
+    }
     res.render('signup');
 });
+
+router.get('/logged-in', (req, res) => {
+    res.render('logged-in')
+})
 
 router.get('/', (req, res) => {
     console.log(req.session);
