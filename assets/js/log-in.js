@@ -1,31 +1,32 @@
-// const passwordVerify = require('../../controller/api/password-verification.js');
-const logInBtn = document.getElementById('logInBtn');
+
 
 // get user info function for user sign up
-const getUserLogin = function() {
-    let username = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    console.log(username)
+
+
+async function getUserLogin(event) {
+  event.preventDefault();
+  
+    let userEmail = (document.getElementById('email').value).trim();
+    let password = (document.getElementById('password').value).trim();
     //console.log('Username is ' + username + ' and your password is ' + password);
-    let fetchUrl = 'api/user/:' + username
-    fetch('api/user', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: {
-        'user_name': username,
-        'password': password
+    if(userEmail && password){
+        const response =  await fetch('api/user/login', {
+          method: 'post',
+          body: JSON.stringify({ 
+            userEmail,
+            password
+          }),
+          headers: { 'Content-Type': 'application/json' },
+        })
+      if (response.ok) {
+        console.log('test')
+        document.location.replace('logged-in');
+      } else {
+        alert(response.statusText);
       }
-    })
-    .then((res) => res.json())
-    .then(data => {
-      console.log(data)
-    })
+    }
 
 }
+      
+document.querySelector('#logInBtn').addEventListener('click', getUserLogin)
 
-logInBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    getUserLogin();
-});
