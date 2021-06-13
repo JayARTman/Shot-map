@@ -14,10 +14,6 @@ router.get('/contact', (req, res) => {
     res.render('contactus');
 });
 
-//if user is logged in, takes them back to home page
-
-
-
 router.get('/logged-in', (req, res) => {
     if(!req.session.loggedIn) {
         res.redirect('signup');
@@ -28,6 +24,7 @@ router.get('/logged-in', (req, res) => {
         name:  req.session.user_name
     })
 })
+
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('logged-in');
