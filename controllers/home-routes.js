@@ -15,6 +15,19 @@ router.get('/contact', (req, res) => {
 });
 
 //if user is logged in, takes them back to home page
+
+
+
+router.get('/logged-in', (req, res) => {
+    if(!req.session.loggedIn) {
+        res.redirect('signup');
+        return;
+    }
+    res.render('logged-in', 
+    {
+        name:  req.session.user_name
+    })
+})
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('logged-in');
@@ -30,10 +43,6 @@ router.get('/signup', (req, res) => {
     }
     res.render('signup');
 });
-
-router.get('/logged-in', (req, res) => {
-    res.render('logged-in')
-})
 
 router.get('/', (req, res) => {
     console.log(req.session);
