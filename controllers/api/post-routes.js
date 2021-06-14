@@ -8,7 +8,8 @@ router.post('/', (req, res) => {
   if (req.session){
     
     Posts.create({ 
-        //title: req.body.title,
+
+
         location: req.body.location,
         info: req.body.info,
         user_name: req.session.user_id,
