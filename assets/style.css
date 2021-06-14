@@ -6,43 +6,46 @@
 
 /* index.html style start */
 /* navbar font style */
-.navbar {
+#headerNav {
     font-family: "Merienda", sans-serif;
 }
 
-/* body font style */
+/* gets rid of the empty space on right side of website */
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* body style start */
 body {
-    font-family: "Baloo Tammudu 2", sans-serif;
+    font-family: "Cairo", sans-serif;
     background-color: rgb(158, 158, 175);
 }
 
-.intro-p {
-    display: flex;
-    justify-content: center;
-    font-size: 1.6rem;
-    font-style: italic
+/* index.handlbars style start */
+/* this adjusts the width of the select a city input */
+.custom-select {
+    width: 325px;
 }
+/* body style end */
 
-.intro-p2 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.4rem;
+/* hero section style start */
+#heroImage {
+    width:100%;
+    height:300px;
+    background: url('./images/heroimg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+/* hero section style end */
+
+/* does this even work? */
+.menu-scroll {
+    overflow-y: scroll;
+    max-height: 200px;
 }
-
-/* index.html style end */
-
-/* about.html style start */
-
-.aboutp1 {
-    display: flex;
-    justify-content: center;
-    font-size: 2.7rem;
-}
-
-/* .aboutp2 { not sure if this is going to work with the future templates
-    display: flex;
-    justify-content: center;
-    margin: 
-} */
-
-/* about.html style end */
