@@ -2,6 +2,7 @@ const btn = document.getElementById('btn');
 
 
       async function submitForm(event) {
+        console.log('btn works')
         event.preventDefault();
 
         const user_name = document.getElementById('fname').value;
@@ -27,5 +28,5 @@ const btn = document.getElementById('btn');
       }
     }
      
-    document.querySelector('.btn').addEventListener('click', submitForm)
+    document.getElementById('btn').addEventListener('click', submitForm)
 
