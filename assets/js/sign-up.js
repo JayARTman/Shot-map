@@ -1,5 +1,3 @@
-const btn = document.getElementById('btn');
-
 
       async function submitForm(event) {
         console.log('btn works')
