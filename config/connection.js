@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const Sequelize = require('sequelize');
 
 // const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
@@ -13,8 +14,9 @@ const Sequelize = require('sequelize');
 //       },
 //     });
 
+
 const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
-    host: 'localhost',
+     host: 'localhost',
     dialect: 'mysql'
 });
 // const sequelize = process.env.JAWSDB_URL
