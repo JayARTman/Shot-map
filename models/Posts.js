@@ -12,6 +12,10 @@ Posts.init(
             primaryKey: true,
             allowNull: false
         },
+        title: {
+            type: DataTypes.STRING(175),
+            allowNull: false
+        },
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -25,17 +29,11 @@ Posts.init(
             allowNull: false,
         },
         user_name: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             references: {
                 model: 'users',
-                key: 'id'
+                key: 'user_name'
             }
-        },
-        image: {
-            type: DataTypes.STRING,
-            name: DataTypes.STRING,
-            data: DataTypes.BLOB('long')
-            
         }
     
         // photo: {
@@ -49,7 +47,7 @@ Posts.init(
     },
     {
         sequelize,
-        timestamps: false,
+        timeStamps: true,
         freezeTableName: true,
         modelName: 'posts'
 });
