@@ -1,4 +1,4 @@
-const btn = document.getElementById('btn');
+const btn = document.getElementById('signUpBtn');
 
 
       async function submitForm(event) {
@@ -27,5 +27,5 @@ const btn = document.getElementById('btn');
       }
     }
      
-    document.querySelector('.btn').addEventListener('click', submitForm)
+    document.querySelector('#signUpBtn').addEventListener('click', submitForm)
 
