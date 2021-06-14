@@ -1,43 +1,5 @@
-const path = require('path');
 const router = require('express').Router();
-const { Posts, Users, Cities} = require('../models')
+const sequelize = require('../config/connection');
 
-router.get('/', (req, res) => {
-    res.render('index');
-});
-
-router.get('/about', (req, res) => {
-    res.render('about');
-});
-
-router.get('/contact', (req, res) => {
-    res.render('contactus');
-});
-
-// if user is logged in, takes them back to home page
-router.get('/login', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('logged-in');
-        return;
-    }
-    res.render('login-form');
-});
-
-router.get('/signup', (req, res) => {
-    if (req.session.loggedIn) {
-        res.redirect('logged-in');
-        return;
-    }
-    res.render('signup');
-});
-
-router.get('/logged-in', (req, res) => {
-    res.render('logged-in')
-})
-
-router.get('/', (req, res) => {
-    console.log(req.session);
-  
-});
- 
+//login in and out
 module.exports = router;
