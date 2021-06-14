@@ -1,17 +1,20 @@
 const router = require('express').Router();
+
 const sequelize = require('../../config/connection');
 const { Posts, Users, Cities} = require('../../models')
 
 
 //route for posting a new post
 router.post('/', (req, res) => {
+  
+  
   if (req.session){
-    
+    // let image = req.files.photo
+    // image.mv('../../assets/images/');
     Posts.create({ 
-        //title: req.body.title,
         location: req.body.location,
         info: req.body.info,
-        user_name: req.session.user_id,
+        user_name: req.session.user_id
         //picture: req.body.picture
     })
     .then(dbPostData => res.json(dbPostData),
