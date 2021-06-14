@@ -12,10 +12,7 @@ Posts.init(
             primaryKey: true,
             allowNull: false
         },
-        // title: {
-        //     type: DataTypes.STRING(175),
-        //     allowNull: false
-        // },
+
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -34,6 +31,12 @@ Posts.init(
                 model: 'users',
                 key: 'id'
             }
+        },
+        image: {
+            type: DataTypes.STRING,
+            name: DataTypes.STRING,
+            data: DataTypes.BLOB('long')
+            
         }
         // photo: {
         //     type: DataTypes.STRING,
