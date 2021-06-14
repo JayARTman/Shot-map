@@ -12,6 +12,7 @@ Posts.init(
             primaryKey: true,
             allowNull: false
         },
+
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -37,15 +38,15 @@ Posts.init(
             data: DataTypes.BLOB('long')
             
         }
-    
         // photo: {
-        //     references: {
-        //         type: DataTypes.STRING,
-        //         references: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //          references: {
         //             model: 'Photo',
         //             key: 'id'
         //         }
-        //     }
+            
+        // }
     },
     {
         sequelize,
@@ -53,5 +54,6 @@ Posts.init(
         freezeTableName: true,
         modelName: 'posts'
 });
+    
 
 module.exports = Posts;
