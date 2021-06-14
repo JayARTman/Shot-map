@@ -12,10 +12,7 @@ Posts.init(
             primaryKey: true,
             allowNull: false
         },
-        // title: {
-        //     type: DataTypes.STRING(175),
-        //     allowNull: false
-        // },
+
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -36,12 +33,11 @@ Posts.init(
             }
         }
         // photo: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //          references: {
-        //             model: 'Photo',
-        //             key: 'id'
-        //         }
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'images',
+        //         key: 'id'
+        //     }
             
         // }
     },

@@ -19,47 +19,33 @@ html,body {
     overflow-x: hidden; 
 }
 
-/* body font style */
+/* body style start */
 body {
-    font-family: "Baloo Tammudu 2", sans-serif;
+    font-family: "Cairo", sans-serif;
     background-color: rgb(158, 158, 175);
 }
 
-.intro-p {
-    display: flex;
-    justify-content: center;
-    font-size: 1.6rem;
-    font-style: italic
-}
-
-.intro-p2 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.4rem;
-}
-
-/* this adjusts the width of the select a city on index.html */
+/* index.handlbars style start */
+/* this adjusts the width of the select a city input */
 .custom-select {
     width: 325px;
 }
+/* body style end */
 
+/* hero section style start */
+#heroImage {
+    width:100%;
+    height:300px;
+    background: url('./images/heroimg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+/* hero section style end */
+
+/* does this even work? */
 .menu-scroll {
     overflow-y: scroll;
     max-height: 200px;
 }
-
-/* about.html style start */
-
-
-.aboutp1 {
-    display: flex;
-    justify-content: center;
-    font-size: 2.7rem;
-}
-
-/* .card {
-    flex: .5 .5 33%;
-    height: 100px;
-} */
-
-/* about.html style end */

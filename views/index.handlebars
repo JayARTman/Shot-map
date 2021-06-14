@@ -1,87 +1,88 @@
-    <!-- main div that holds top(hero) middle(signup) and lower(upload) divs-->
-  <body>
-    <section class="main-container text-center">
-        <div class="row">
-          <div class="col-sm">
-            <!-- hero div -->
-            <article class="hero-container bg-primary">
+<!-- main div that holds top(hero) middle(signup) and lower(upload) divs-->
+<body>
+  <section class="main-container text-center">
+      <div class="row">
+        <div class="col-sm">
+          <!-- hero div -->
+          <article id="heroImage" class="hero-container d-flex align-items-center">
+              <div class="container-fluid">
                 <div class="row">
-                    <!-- filler is used for the empty spacing on the left and right sides of the center grid, which is where our stuff will be -->
-                    <!-- KEEP THESE! -->
                   <div id="filler" class="col-sm"></div>
                   <div class="col-sm-10">
-                    <h2>Search for photos in Wisconsin cities!</h2>  
+                    <h2 class="text-white">Search for photos in Wisconsin cities!</h2>  
                     <div class="row justify-content-center">
-                        <div class="col-9">
-                          <div class="input-group justify-content-center">
-                            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
-                              <option selected>Choose...</option>
-                              <option id="1" class="dropdown-city-option" value="1">Appleton</option>
-                              <option id="2" class="dropdown-city-option" value="2">Beloit</option>
-                              <option id="3" class="dropdown-city-option" value="3">Brookfield</option>
-                              <option id="4" class="dropdown-city-option" value="4">Eau Claire</option>
-                              <option id="5" class="dropdown-city-option" value="5">Fond du Lac</option>
-                              <option id="6" class="dropdown-city-option" value="6">Green Bay</option>
-                              <option id="7" class="dropdown-city-option" value="7">Greenfield</option>
-                              <option id="8" class="dropdown-city-option" value="8">Janesville</option>
-                              <option id="9" class="dropdown-city-option" value="9">Kenosha</option>
-                              <option id="10" class="dropdown-city-option" value="10">La Crosse</option>
-                              <option id="11" class="dropdown-city-option" value="11">Madison</option>
-                              <option id="12" class="dropdown-city-option" value="12">Milwaukee</option>
-                              <option id="13" class="dropdown-city-option" value="13">New Berlin</option>
-                              <option id="14" class="dropdown-city-option" value="14">Oshkosh</option>
-                              <option id="15" class="dropdown-city-option" value="15">Racine</option>
-                              <option id="16" class="dropdown-city-option" value="16">Sheboygan</option>
-                              <option id="17" class="dropdown-city-option" value="17">Waukesha</option>
-                              <option id="18" class="dropdown-city-option" value="18">Wausau</option>
-                              <option id="19" class="dropdown-city-option" value="19">Wauwatosa</option>
-                              <option id="20" class="dropdown-city-option" value="20">West Allis</option>
-                            </select>
-                            <button type="button" class="btn btn-secondary" id="searchBtn">Search</button>
-                          </div>  
-                        </div>    
+                      <div class="col-9">
+                        <div class="input-group justify-content-center">
+                          <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                            <option selected>Choose...</option>
+                            <option id="1" class="dropdown-city-option" value="1">Appleton</option>
+                            <option id="2" class="dropdown-city-option" value="2">Beloit</option>
+                            <option id="3" class="dropdown-city-option" value="3">Brookfield</option>
+                            <option id="4" class="dropdown-city-option" value="4">Eau Claire</option>
+                            <option id="5" class="dropdown-city-option" value="5">Fond du Lac</option>
+                            <option id="6" class="dropdown-city-option" value="6">Green Bay</option>
+                            <option id="7" class="dropdown-city-option" value="7">Greenfield</option>
+                            <option id="8" class="dropdown-city-option" value="8">Janesville</option>
+                            <option id="9" class="dropdown-city-option" value="9">Kenosha</option>
+                            <option id="10" class="dropdown-city-option" value="10">La Crosse</option>
+                            <option id="11" class="dropdown-city-option" value="11">Madison</option>
+                            <option id="12" class="dropdown-city-option" value="12">Milwaukee</option>
+                            <option id="13" class="dropdown-city-option" value="13">New Berlin</option>
+                            <option id="14" class="dropdown-city-option" value="14">Oshkosh</option>
+                            <option id="15" class="dropdown-city-option" value="15">Racine</option>
+                            <option id="16" class="dropdown-city-option" value="16">Sheboygan</option>
+                            <option id="17" class="dropdown-city-option" value="17">Waukesha</option>
+                            <option id="18" class="dropdown-city-option" value="18">Wausau</option>
+                            <option id="19" class="dropdown-city-option" value="19">Wauwatosa</option>
+                            <option id="20" class="dropdown-city-option" value="20">West Allis</option>
+                          </select>
+                          <button type="button" class="btn btn-secondary" id="searchBtn">Search</button>
+                        </div>  
+                      </div>    
                     </div> 
                   </div>
-                  <div id="filler" class="col-sm"></div>
+                <div id="filler" class="col-sm"></div>
+              </div>
+            </div>
+          </article>
+          <!-- sign-up div -->
+          <article class="sign-up-container flex-d bg-danger">
+              <div class="row">
+                <div id="filler" class="col-sm"></div>
+                <!-- made the buttons as links for now -->
+                <div class="col-sm-10 align-self-center">
+                  <h3>Not a member of the SHOT-MAP community yet!? SIGN UP now!</h3>
+                  <a type="button" class="btn btn-secondary" href="/signup">
+                    Sign up
+                  </a>
+                  <br/>
+                  <br/>
                 </div>
-            </article>
-            <!-- sign-up div -->
-            <article class="sign-up-container flex-d bg-danger">
-                <div class="row">
-                  <div id="filler" class="col-sm"></div>
-                  <!-- made the buttons as links for now -->
-                  <div class="col-sm-10 align-self-center">
-                    <h3>Log in to upload and share your city pictures with the SHOT MAP community.</h3> 
-                    <a type="button" class="btn btn-secondary pb-1" href="/login">Log in</a>
-                    <br/>
-                    <br/>
-                    <h3>Not a member of the SHOT-MAP community yet!? SIGN UP now!</h3>
-                    <a type="button" class="btn btn-secondary pb-1" href="/signup">
-                      Sign up
-                    </a>
-                    <br/>
-                    <br/>
-                  </div>
-                  <div id="filler" class="col-sm"></div>
-                </div>
-            </article>
-            <!-- Uploaded images div -->
-            <article class="upload-images-container">
-              <div class="d-flex flex-column justify-content-center">
-                  <h4 class="pt-1">Latest Uploads:</h4>
-                {{!-- <div id="filler" class="col-sm"></div> --}}
-                    
+                <div id="filler" class="col-sm"></div>
+              </div>
+          </article>
+          <!-- Uploaded images div -->
+          <article class="upload-images-container">
+            <div class="d-flex flex-column justify-content-center">
+                <h4 class="pt-1">Latest Uploads:</h4>
+              {{!-- <div id="filler" class="col-sm"></div> --}}
+                  
 
-                    <div id='content' class="d-flex text-center align-items-center justify-content-around flex-wrap">
+                  <div id='content' class="d-inline-flex text-center align-items-center justify-content-around flex-wrap">
+                    
+                      <script  type='text/x-handlebars-template' id="posts-template">
                       
+
                         
                     </div>
                 
                 
               </div>
             </article>
-          </div>
+
+                      </script> 
         </div>
-    </section>
-    <script src='/js/index.js'></script>
-  </body>
+      </div>
+  </section>
+  <script src='/js/index.js'></script>
+</body>
