@@ -30,6 +30,19 @@ body {
 .custom-select {
     width: 325px;
 }
+/* body style end */
+
+/* hero section style start */
+#heroImage {
+    width:100%;
+    height:300px;
+    background: url('./images/heroimg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+  }
+/* hero section style end */
 
 /* does this even work? */
 .menu-scroll {
