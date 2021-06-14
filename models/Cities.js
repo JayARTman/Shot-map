@@ -1,7 +1,6 @@
 
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-
 class Cities extends Model {}
 
 Cities.init( 
@@ -13,17 +12,17 @@ Cities.init(
             allowNull: false
         },
         city_name: {
-            type: DataTypes.STRING(50),
+            type: DataTypes.STRING(17),
+            allowNull: false
+        },
+        state: {
+            type: DataTypes.STRING(17),
             allowNull: false
         }
-        // state: {
-        //     type: DataTypes.STRING(17),
-        //     allowNull: false
-        // }
     },
     {
         sequelize,
-        timestamps: false,
+        timeStamps: true,
         freezeTableName: true,
         modelName: 'cities'
 });
