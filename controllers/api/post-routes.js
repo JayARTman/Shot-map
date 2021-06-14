@@ -6,7 +6,6 @@ const { Posts, Users, Cities} = require('../../models')
 //route for posting a new post
 router.post('/', (req, res) => {
     Posts.create({ 
-        title: req.body.title,
         location: req.body.location,
         info: req.body.info,
         user_name: req.body.user_name
