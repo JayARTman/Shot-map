@@ -13,14 +13,17 @@ async function postData(event) {
    //this is to get the description or text from user
     let infoHolder = document.getElementById("infoHolder");
     let info = infoHolder.value;
-    console.log(info)
+
+    let image = document.getElementById('image').value
+   
     
     if (location && info) {
+        
         const response = await fetch ('/api/post', {
             method: 'post',
             body: JSON.stringify({
                 location,
-                info 
+                info, 
             }),
             headers: {
                 'Content-Type': 'application/json'

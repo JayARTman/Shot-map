@@ -2,6 +2,7 @@
 const path = require('path')
 const express = require('express');
 const session = require('express-session');
+const multer = require('multer');
 const exphbs = require('express-handlebars');
 
 const app = express();
@@ -21,6 +22,8 @@ const sess = {
   };
 
 app.use(session(sess));
+//set storage engine
+
 
 const hbs = exphbs.create({});
 

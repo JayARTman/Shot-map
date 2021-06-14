@@ -31,20 +31,13 @@ Posts.init(
                 model: 'users',
                 key: 'id'
             }
-        },
-        image: {
-            type: DataTypes.STRING,
-            name: DataTypes.STRING,
-            data: DataTypes.BLOB('long')
-            
         }
         // photo: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //          references: {
-        //             model: 'Photo',
-        //             key: 'id'
-        //         }
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //         model: 'images',
+        //         key: 'id'
+        //     }
             
         // }
     },
