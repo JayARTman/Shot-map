@@ -11,6 +11,7 @@ router.post('/', (req, res) => {
 //  upload()
   if (req.session){
 
+
     Posts.create({ 
       location: req.body.location,
       info: req.body.info,
@@ -24,6 +25,7 @@ router.post('/', (req, res) => {
     console.log(err);
     res.status(500).json(err);
   });
+
     
   }
 });

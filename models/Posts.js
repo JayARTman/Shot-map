@@ -31,6 +31,7 @@ Posts.init(
                 model: 'users',
                 key: 'id'
             }
+
         },
         photo: {
             type: DataTypes.INTEGER,
@@ -39,7 +40,12 @@ Posts.init(
                 model: 'images',
                 key: 'id'
             }
+
         }
+        // image: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false
+        // }
     },
     {
         sequelize,
