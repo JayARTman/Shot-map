@@ -42,7 +42,8 @@ async function postData(event) {
                 headers: {
                     'Content-Type': 'application/json'
                 }
-            });       
+            });
+                  
             // if (response.ok) {
             //     document.location.reload();
             //   } else {
