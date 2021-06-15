@@ -65,7 +65,7 @@ app.use(express.static(path.join(__dirname, '/assets')));
 app.use(require('./controllers'));
 
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => {
         console.log(`Listenging on ${PORT}`)
     })
