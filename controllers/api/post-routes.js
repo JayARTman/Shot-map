@@ -35,7 +35,7 @@ router.get('/', (req, res) => {
     Posts.findAll({
       include: [{ model: Users, attributes: ['user_name']},
       { model: Cities, attributes: ['city_name']},
-    { model: Images, attributes: ['path']}]
+    { model: Images, attributes: ['name']}]
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
