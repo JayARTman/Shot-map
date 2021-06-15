@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 
   const upload = multer({
     storage: storage
-  }).single('"image"');
+  }).single('image');
   if (req.session){
     // let image = req.files.photo
     // image.mv('../../assets/images/');
@@ -33,8 +33,8 @@ router.post('/', (req, res) => {
         Posts.create({ 
           location: req.body.location,
           info: req.body.info,
-          user_name: req.session.user_id,
-          image: req.file.path
+          user_name: req.session.user_id
+          // image: req.file.path
           //picture: req.body.picture
       })
       .then(dbPostData => res.json(dbPostData),
