@@ -19,7 +19,7 @@ const fetchData = function() {
                          
         {{#each allData}}
         
-        <div class="card h-25 mw-25 ml-auto mr-auto mb-2" style="width: 10rem;">
+        <div id="infoCard" class="card h-25 mw-25 ml-5 mr-5 mb-4" style="width: 8rem;">
             <p class="m-0">{{this.title}}</p>
             <img class="card-img-top img-fluid img-thumbnail" src="/images/150.png" alt="Card image cap">
             <div class="p-2">
