@@ -1,5 +1,6 @@
 
-const path = require('path')
+const path = require('path');
+const dotenv = require('dotenv');
 const express = require('express');
 const session = require('express-session');
 const multer = require('multer');
