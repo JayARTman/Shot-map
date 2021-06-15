@@ -1,5 +1,6 @@
 
-const path = require('path')
+const path = require('path');
+const dotenv = require('dotenv');
 const express = require('express');
 const session = require('express-session');
 const multer = require('multer');
@@ -33,6 +34,32 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//       cb(null, path.join(__dirname + '../../../assets/uploads'))},
+//   filename: function(req, file, cb) {
+//     cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+//   }
+// });
+
+// // console.log(storage)
+
+// const upload = multer({
+//   storage: storage
+// }).single('postImage');
+
+// app.post('/api/upload', upload, (req, res) => {
+//   upload(req, res, (err) => {
+//     console.log()
+//     if(err) {
+//         res.status(500).json(err);
+//         console.log(err);
+//     }
+//     else {
+//       console.log(req.body)
+//     }
+//   })
+// })
 app.use(express.static(path.join(__dirname, '/assets')));
 
 app.use(require('./controllers'));

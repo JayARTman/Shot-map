@@ -16,11 +16,11 @@ const showLatestData = function() {
         
         <div class="card h-25 mw-25 ml-auto mr-auto mb-2" style="width: 10rem;">
             <p class="m-0">{{this.title}}</p>
-            <img class="card-img-top img-fluid img-thumbnail" src="/images/150.png" alt="Card image cap">
+            <img class="card-img-top img-fluid img-thumbnail" src='/uploads/{{this.image.name}}' alt="Card image cap">
             <div class="p-2">
-                <p class="card-text m-0">  {{this.user.user_name}}</p>
-                <p class="card-text m-0"> {{this.city.city_name}}</p>
-                
+                <p class="card-text m-0">{{this.user.user_name}}</p>
+                <p class="card-text m-0">{{this.city.city_name}}</p>
+                <p class="card-text m-0">{{this.info}}</p>
             </div>
         </div>
         
@@ -63,7 +63,8 @@ const fetchData = function() {
             <div class="p-2">
                 <p class="card-text m-0">{{this.user.user_name}}</p>
                 <p class="card-text m-0">{{this.city.city_name}}</p>
-    
+                <p class="card-text m-0">{{this.info}}</p>
+                
             </div>
         </div>
         
