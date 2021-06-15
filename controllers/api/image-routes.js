@@ -35,11 +35,12 @@ router.post('/', (req, res) => {
             console.log(err);
         }
         else {
+            const pathToPhoto = path.join(__dirname, req.file.path)
             console.log(req.file)
             Images.create({
                 type: req.file.mimetype,
                 name: req.file.filename,
-                path: req.file.path
+                name: req.file.filename
             })
             .then(imageData => res.json(imageData))
             .catch((err) => {
