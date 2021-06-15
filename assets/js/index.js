@@ -24,7 +24,7 @@ const fetchData = function() {
             <div class="p-2">
                 <p class="card-text m-0">{{this.user.user_name}}</p>
                 <p class="card-text m-0">{{this.city.city_name}}</p>
-                
+    
             </div>
         </div>
         
