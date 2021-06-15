@@ -2,7 +2,7 @@
 const Cities = require('./Cities');
 const Users = require('./Users');
 const Posts = require('./Posts');
-const Images = require('./Images')
+
 
 Posts.belongsTo(Users, {
     foreignKey: 'user_name',
@@ -28,8 +28,7 @@ Posts.belongsTo(Cities, {
 module.exports = {
     Posts,
     Users,
-    Cities,
-    Images
+    Cities
 };
 
 
