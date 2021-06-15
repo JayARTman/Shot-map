@@ -14,21 +14,23 @@ async function postData(event) {
     let infoHolder = document.getElementById("infoHolder");
     let info = infoHolder.value;
 
-    let image = document.getElementById('image').value
-   
+    let image = document.getElementById('image').files[0]
+    console.log(image)
     
     if (location && info) {
         
         const response = await fetch ('/api/post', {
-            method: 'post',
+            method: 'POST',
             body: JSON.stringify({
                 location,
-                info, 
+                info,
+                image, 
             }),
             headers: {
                 'Content-Type': 'application/json'
             }
-        })
+        });
+        
         if (response.ok) {
             document.location.reload();
           } else {
