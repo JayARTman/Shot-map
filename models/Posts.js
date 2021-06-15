@@ -32,9 +32,13 @@ Posts.init(
                 key: 'id'
             }
         },
-        image: {
-            type: DataTypes.STRING,
-            allowNull: false
+        photo: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'images',
+                key: 'id'
+            }
         }
     },
     {

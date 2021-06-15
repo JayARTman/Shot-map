@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
   
 const upload = multer({
     storage: storage
-}).single('image');
+}).single('postImage');
 
 router.get('/', (req, res) => {
     Images.findAll()
@@ -29,15 +29,16 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     
     upload(req, res, (err) => {
-        
+        // console.log(req.body)
         if(err) {
             res.status(500).json(err);
             console.log(err);
         }
         else {
+            console.log(req.file)
             Images.create({
-                original_name: req.file.originalname,
-                savedAs_name: req.file.filename,
+                type: req.file.mimetype,
+                name: req.file.filename,
                 path: req.file.path
             })
             .then(imageData => res.json(imageData))
