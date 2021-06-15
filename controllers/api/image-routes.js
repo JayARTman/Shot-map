@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     
     upload(req, res, (err) => {
-        console.log(req.file)
+        
         if(err) {
             res.status(500).json(err);
             console.log(err);

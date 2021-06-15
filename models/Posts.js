@@ -31,15 +31,11 @@ Posts.init(
                 model: 'users',
                 key: 'id'
             }
+        },
+        image: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
-        // photo: {
-        //     type: DataTypes.INTEGER,
-        //     references: {
-        //         model: 'images',
-        //         key: 'id'
-        //     }
-            
-        // }
     },
     {
         sequelize,
