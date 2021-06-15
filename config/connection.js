@@ -2,9 +2,9 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
+const sequelize = new Sequelize('heroku_8686b49a3b7093a', 'bb832e4b25b708', 'f18c6dc2', {
 
-     host: DB_HOST,
+     host: 'us-cdbr-east-04.cleardb.com',
     dialect: 'mysql'
 });
 
@@ -12,4 +12,3 @@ module.exports = sequelize;
 
 
 
-'mysql:// bb832e4b25b708 : f18c6dc2 @ us-cdbr-east-04.cleardb.com / heroku_8686b49a3b7093a ?reconnect=true'
