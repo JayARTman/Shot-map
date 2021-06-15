@@ -16,11 +16,7 @@ Cities.init(
             type: DataTypes.STRING(50),
             allowNull: false
         }
-        // state: {
-        //     type: DataTypes.STRING(17),
-        //     allowNull: false
-        // }
-    },
+    },  
     {
         sequelize,
         timestamps: false,
