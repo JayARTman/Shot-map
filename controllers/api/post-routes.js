@@ -15,7 +15,8 @@ router.post('/', (req, res) => {
     Posts.create({ 
       location: req.body.location,
       info: req.body.info,
-      user_name: req.session.user_id
+      user_name: req.session.user_id,
+      photo: req.body.photo
       //picture: req.body.picture
   })
   .then(dbPostData => res.json(dbPostData),

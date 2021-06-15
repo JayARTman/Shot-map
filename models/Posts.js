@@ -35,7 +35,7 @@ Posts.init(
         },
         photo: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
             references: {
                 model: 'images',
                 key: 'id'
