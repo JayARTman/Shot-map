@@ -8,8 +8,8 @@ Cities.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            autoIncrement: true,
             primaryKey: true,
+            autoIncrement: true,
             allowNull: false
         },
         city_name: {
