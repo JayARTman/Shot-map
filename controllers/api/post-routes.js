@@ -1,21 +1,30 @@
 const router = require('express').Router();
+
 const sequelize = require('../../config/connection');
 const { Posts, Users, Cities} = require('../../models')
 
 
 //route for posting a new post
 router.post('/', (req, res) => {
+  
+  
+  if (req.session){
+    // let image = req.files.photo
+    // image.mv('../../assets/images/');
     Posts.create({ 
-        title: req.body.title,
         location: req.body.location,
         info: req.body.info,
-        user_name: req.body.user_name
+        user_name: req.session.user_id
+        //picture: req.body.picture
     })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbPostData => res.json(dbPostData),
+     console.log(req.body))
+    
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+  }
 });
 //route for finding all posts
 router.get('/', (req, res) => {
@@ -48,6 +57,25 @@ router.get('/:location', (req, res) => {
        
     })
     .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+})
+
+router.get('/:user_name', (req, res) => {
+  Posts.findAll({
+    where: {
+      user_name: req.params.user_name
+    },
+    include: [
+      {
+        model: Cities,
+        attributes: ['city_name']
+      }
+    ]
+  })
+  .then(dbPostData => res.json(dbPostData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);

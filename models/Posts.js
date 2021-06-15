@@ -12,10 +12,7 @@ Posts.init(
             primaryKey: true,
             allowNull: false
         },
-        title: {
-            type: DataTypes.STRING(175),
-            allowNull: false
-        },
+
         location: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -35,15 +32,14 @@ Posts.init(
                 key: 'id'
             }
         }
-    
         // photo: {
+        //     type: DataTypes.INTEGER,
         //     references: {
-        //         type: DataTypes.STRING,
-        //         references: {
-        //             model: 'Photo',
-        //             key: 'id'
-        //         }
+        //         model: 'images',
+        //         key: 'id'
         //     }
+            
+        // }
     },
     {
         sequelize,
@@ -51,5 +47,6 @@ Posts.init(
         freezeTableName: true,
         modelName: 'posts'
 });
+    
 
 module.exports = Posts;

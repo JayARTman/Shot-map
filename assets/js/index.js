@@ -14,32 +14,30 @@ const fetchData = function() {
     })
     .then(res => res.json())
     .then(data => {
+        let allData = data.reverse();
         const template = Handlebars.compile(`
                          
-        {{#each data}}
+        {{#each allData}}
         
         <div id="infoCard" class="card h-25 mw-25 ml-5 mr-5 mb-4" style="width: 8rem;">
             <p class="m-0">{{this.title}}</p>
             <img class="card-img-top img-fluid img-thumbnail" src="/images/150.png" alt="Card image cap">
             <div class="p-2">
-                <p class="card-text m-0">{{this.user.user_name}}</p>
-                <p class="card-text m-0">{{this.city.city_name}}</p>
+                <p class="card-text m-0">  {{this.user.user_name}}</p>
+                <p class="card-text m-0"> {{this.city.city_name}}</p>
                 
             </div>
         </div>
         
         {{/each}}
         `);
-        const context = { data }
+        const context = { allData }
         const compiled = template(context);
         console.log(context)
         
         document.getElementById('content').innerHTML = compiled;
         })
 }
-const fill = function() {
-    
-    
-}
+
 btn.addEventListener('click', fetchData)
 
