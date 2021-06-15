@@ -2,9 +2,9 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 
-const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
+const sequelize = new Sequelize('heroku_8686b49a3b7093a', 'bb832e4b25b708', 'f18c6dc2', {
 
-     host: 'localhost',
+     host: 'us-cdbr-east-04.cleardb.com',
     dialect: 'mysql'
 });
 // const sequelize = process.env.JAWSDB_URL
@@ -21,3 +21,4 @@ module.exports = sequelize;
 
 
 
+'mysql:// bb832e4b25b708 : f18c6dc2 @ us-cdbr-east-04.cleardb.com / heroku_8686b49a3b7093a ?reconnect=true'
