@@ -2,6 +2,7 @@
 const Cities = require('./Cities');
 const Users = require('./Users');
 const Posts = require('./Posts');
+const Images = require('./Images')
 
 Posts.belongsTo(Users, {
     foreignKey: 'user_name',
@@ -20,10 +21,15 @@ Posts.belongsTo(Cities, {
     constraints: false
 });
 
+// Posts.belongsTo(Images, {
+//     foreignKey: 'photo',
+//     constraints: false
+// })
 module.exports = {
     Posts,
     Users,
-    Cities
+    Cities,
+    Images
 };
 
 
