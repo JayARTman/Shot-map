@@ -31,6 +31,16 @@ Posts.init(
                 model: 'users',
                 key: 'id'
             }
+
+        },
+        photo: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'images',
+                key: 'id'
+            }
+
         }
         // image: {
         //     type: DataTypes.STRING,
