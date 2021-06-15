@@ -5,7 +5,7 @@
         <div class="col-sm">
           <!-- hero div -->
           <article id="heroImage" class="hero-container d-flex align-items-center">
-              <div class="container-fluid">
+              <div class="container-fluid col-md-10 col-lg-8 col-xl-7">
                 <div class="row">
                   <div id="filler" class="col-sm"></div>
                   <div class="col-sm-10">
@@ -13,7 +13,7 @@
                     <div class="row justify-content-center">
                       <div class="col-9">
                         <div class="input-group justify-content-center">
-                          <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                          <select class="custom-select rounded" id="inputGroupSelect04" aria-label="Example select with button addon">
                             <option selected>Choose...</option>
                             <option id="1" class="dropdown-city-option" value="1">Appleton</option>
                             <option id="2" class="dropdown-city-option" value="2">Beloit</option>
@@ -41,18 +41,19 @@
                       </div>    
                     </div> 
                   </div>
-                <div id="filler" class="col-sm"></div>
+                <div id="filler" class="col-sm">
               </div>
             </div>
           </article>
           <!-- sign-up div -->
-          <article class="sign-up-container flex-d bg-danger">
+          <article class="sign-up-container">
               <div class="row">
                 <div id="filler" class="col-sm"></div>
                 <!-- made the buttons as links for now -->
-                <div class="col-sm-10 align-self-center">
+                <div class="col-sm-8 col-lg-7 col-xl-6 justify-content-center text-center pt-4 pb-2">
                   <h3>Not a member of the SHOT-MAP community yet!? SIGN UP now!</h3>
-                  <a type="button" class="btn btn-secondary" href="/signup">
+                  <br/>
+                  <a type="button" class="btn btn-secondary col-6 col-xl-4" href="/signup">
                     Sign up
                   </a>
                   <br/>
@@ -62,25 +63,20 @@
               </div>
           </article>
           <!-- Uploaded images div -->
-          <article class="upload-images-container">
-            <div class="d-flex flex-column justify-content-center">
-                <h4 class="pt-1">Latest Uploads:</h4>
-              {{!-- <div id="filler" class="col-sm"></div> --}}
-                  
-
-                  <div id='content' class="d-inline-flex text-center align-items-center justify-content-around flex-wrap">
-                    
-                      <script  type='text/x-handlebars-template' id="posts-template">
-                      
-
-                        
-                    </div>
-                
-                
-              </div>
-            </article>
-
-                      </script> 
+          <article class="upload-images-container d-flex align-items-center">
+            <div class="container-fluid col-md-10 col-lg-8 col-xl-7">
+              <div class="row">               
+                {{!-- <div id="filler" class="col-sm"></div> --}}
+                <div id="contentParent" class="col-sm-12">
+                  <h4 class="mb-3">Latest Uploads:</h4>              
+                  <div id='content' class="d-inline-flex text-center align-items-center justify-content-around flex-wrap col-xs-9 col-sm-10 col-md-9 col-xl-8">
+                    <script  type='text/x-handlebars-template' id="posts-template"></script> 
+                  </div>
+                </div>
+                {{!-- <div id="filler" class="col-sm"></div>  --}}
+              </div>                  
+            </div>
+          </article>
         </div>
       </div>
   </section>
