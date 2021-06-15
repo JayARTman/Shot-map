@@ -2,20 +2,11 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 
-const sequelize = new Sequelize('heroku_8686b49a3b7093a', 'bb832e4b25b708', 'f18c6dc2', {
+const sequelize = new Sequelize(process.env.DB_NAME, DB_USER, DB_PW, {
 
-     host: 'us-cdbr-east-04.cleardb.com',
+     host: DB_HOST,
     dialect: 'mysql'
 });
-// const sequelize = process.env.JAWSDB_URL
-//   ? new Sequelize(process.env.JAWSDB_URL)
-//   : new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-//       host: 'localhost',
-//       dialect: 'mysql',
-//       dialectOptions: {
-//         decimalNumbers: true,
-//       },
-//     });
 
 module.exports = sequelize;
 
