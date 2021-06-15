@@ -29,7 +29,26 @@ async function postData(event) {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        const photoReference = data.id;
+        if (location && info) {
+            fetch('/api/post', {
+                method: 'post',
+                body: JSON.stringify({
+                    location: location,
+                    info: info,
+                    photo: photoReference
+                    // image, 
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });       
+            // if (response.ok) {
+            //     document.location.reload();
+            //   } else {
+            //     alert(response.statusText);
+            //   }
+        }
     })
 
     // let image = document.getElementById('image').files[0]
@@ -37,25 +56,7 @@ async function postData(event) {
 
     
     
-    if (location && info) {
-        const response = fetch('/api/post', {
-            method: 'post',
-            body: JSON.stringify({
-                location: location,
-                info: info,
-            
-                // image, 
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });       
-        if (response.ok) {
-            document.location.reload();
-          } else {
-            alert(response.statusText);
-          }
-    }
+    
 }
 
 submitBtn.addEventListener('click', postData)
