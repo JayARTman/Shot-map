@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
 
   const upload = multer({
     storage: storage
-  }).single('image');
+  }).single('"image"');
   if (req.session){
     // let image = req.files.photo
     // image.mv('../../assets/images/');
