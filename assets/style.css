@@ -35,12 +35,36 @@ body {
 .mb-2 {
     margin-right: .7px;
 }
-
 /* index.handlebars style end */
 
-/* logged-in.handlebars style start */
+/* about.handlebars style start */
+#aboutMainContainer p {
+    font-size: 1.7rem;
+}
 
-/* logged-in.handlebars style start */
+#aboutTitle {
+    font-style: italic;
+    font-weight: 500;
+}
+
+#aboutMainContainer .border {
+    border-radius: 1.25rem;
+    border-width: 3px!important;
+}
+/* about.handlebars style end */
+
+/* contactus.handlebars style start */
+#mainContactContainer .border {
+    border-radius: 1.25rem;
+    border-width: 3px!important;
+}
+
+#contactTitle {
+    font-style: italic;
+    font-weight: 500;
+} 
+
+/* contactus.handlebars style start */
 
 /* body style end */
 #loggedInHeroImg {
