@@ -2,7 +2,7 @@ require('dotenv').config();
 const Sequelize = require('sequelize');
 
 
-const sequelize = new Sequelize('shot_map', 'root', '2501Estratford!', {
+const sequelize = new Sequelize('shot_map', 'root', 'Superimportantsequel1423!', {
 
      host: 'localhost',
     dialect: 'mysql'
