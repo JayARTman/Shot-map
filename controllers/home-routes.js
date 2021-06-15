@@ -1,6 +1,6 @@
 const path = require('path');
 const router = require('express').Router();
-const { Posts, Users, Cities} = require('../models')
+const { Posts, Users, Cities, Images} = require('../models')
 
 router.get('/', (req, res) => {
     res.render('index');
