@@ -14,8 +14,8 @@ async function postData(event) {
     let infoHolder = document.getElementById("infoHolder");
     let info = infoHolder.value;
 
-    let image = document.getElementById('image').files[0]
-    console.log(image)
+    // let image = document.getElementById('image').files[0]
+    // console.log(image)
     
     if (location && info) {
         
@@ -23,8 +23,8 @@ async function postData(event) {
             method: 'POST',
             body: JSON.stringify({
                 location,
-                info,
-                image, 
+                info
+                // image, 
             }),
             headers: {
                 'Content-Type': 'application/json'
