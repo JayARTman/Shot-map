@@ -5,13 +5,13 @@ const express = require('express');
 const session = require('express-session');
 const multer = require('multer');
 const exphbs = require('express-handlebars');
-const connect = require('connect');
+
 
 const app = express();
 const PORT = process.env.PORT || 3008
 
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(connect.session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     secret: 'Secret cookies',
