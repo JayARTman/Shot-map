@@ -1,4 +1,3 @@
-const path = require('path');
 const router = require('express').Router();
 const { Posts, Users, Cities, Images} = require('../models')
 

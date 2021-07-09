@@ -7,17 +7,16 @@ const Images = require('./Images');
 
 Posts.belongsTo(Users, {
     foreignKey: 'user_name',
-    constraints: false
-  
+    constraints: false,
+     allowNull:true,
+      defaultValue:null
 });
 
 Users.hasMany(Posts, {
-    foreignKey: 'user_name',
     constraints: false
-    
 });
 
-Posts.belongsTo(Cities, {
+Posts.hasOne(Cities, {
     foreignKey: 'location',
     constraints: false
 });
