@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, '/assets')));
 
 app.use(require('./controllers'));
 
-app.use(routes);
+// app.use(routes);
 
 sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => {
