@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Posts, Users, Cities, Images} = require('../models')
 
 router.get('/', (req, res) => {
-    res.send('index');
+    res.render('index');
 });
 
 router.get('/about', (req, res) => {
