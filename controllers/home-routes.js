@@ -2,15 +2,15 @@ const router = require('express').Router();
 const { Posts, Users, Cities, Images} = require('../models')
 
 router.get('/', (req, res) => {
-    res.render('index.handlebars');
+    res.render('index');
 });
 
 router.get('/about', (req, res) => {
-    res.render('about.handlebars');
+    res.render('about');
 });
 
 router.get('/contact', (req, res) => {
-    res.render('contactus.handlebars');
+    res.render('contactus');
 });
 
 //if user is logged in, takes them back to home page
