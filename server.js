@@ -37,8 +37,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '/assets')));
 
-app.set('views', path.join(__dirname));
-app.set('view engine', 'exphbs');
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 app.use(require('./controllers'));
 
 // app.use(routes);
